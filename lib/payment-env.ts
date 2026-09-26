@@ -1,5 +1,10 @@
-/** Payment copy for Peaks 3141 & Voice 3141 — Pi Mainnet (App Studio). */
+/** Payment copy for Peaks 3141 & Voice 3141 — Pi Mainnet. */
 export const MAINNET_UNLOCK_PI = 3.141 as const;
+
+/** Pi checkout uses Portal catalog price — must match MAINNET_UNLOCK_PI. */
+export function catalogPriceMatchesUnlock(priceInPi: number): boolean {
+  return Number.isFinite(priceInPi) && Math.abs(priceInPi - MAINNET_UNLOCK_PI) < 0.0001;
+}
 
 export const PAYMENT_ENV = {
   badge: "MAINNET π",
@@ -23,7 +28,9 @@ export const PAYMENT_ENV = {
   footer: "Mainnet checkout. Pi is transferred per Pi Network payment rules.",
   signInHint: "Sign in with Pi Browser to load the payment form.",
   loadingProduct:
-    "Loading product from App Studio… If this stays empty, the product catalog did not sync yet.",
+    "Loading unlock product from Pi… If this stays empty, check Developer Portal catalog sync.",
+  catalogPriceMismatch: (catalog: number) =>
+    `Developer Portal product must be ${MAINNET_UNLOCK_PI} π (catalog shows ${catalog} π). Fix the product price before checkout.`,
   deedOwnedStatus: "OWNED · Mainnet unlock",
   deedPaidLabel: (amount: number | string) => `${amount} π`,
 } as const;

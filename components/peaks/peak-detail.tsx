@@ -8,7 +8,11 @@ import { LiveTimeCard } from "@/components/peaks/live-time-card";
 import { AntipodeResultSheet } from "@/components/peaks/antipode-result-sheet";
 import type { AntipodeTapResult } from "@/lib/peaks/antipode-tap";
 import { PEAK_DETAIL_PRODUCT_ID } from "@/lib/product-config";
-import { MAINNET_UNLOCK_PI, PAYMENT_ENV } from "@/lib/payment-env";
+import {
+  MAINNET_UNLOCK_PI,
+  PAYMENT_ENV,
+  catalogPriceMatchesUnlock,
+} from "@/lib/payment-env";
 import {
   bandOf,
   continentName,
@@ -137,8 +141,10 @@ function PeakPaywall({
     [products],
   );
 
-  /** Same as Voice: always show 3.141 π in our form (not catalog price_in_pi). */
-  const productPrice = product ? MAINNET_UNLOCK_PI : null;
+  const catalogPriceOk =
+    product != null && catalogPriceMatchesUnlock(product.price_in_pi);
+  /** Show 3.141 π only when Portal catalog matches (checkout uses catalog price). */
+  const productPrice = catalogPriceOk ? MAINNET_UNLOCK_PI : null;
 
   useEffect(() => {
     setLocalDeed(readLocalDeed());
@@ -217,7 +223,7 @@ function PeakPaywall({
   };
 
   const handlePay = async () => {
-    if (!sdk || !product || busy || owned) return;
+    if (!sdk || !product || !catalogPriceOk || busy || owned) return;
     setBusy(true);
     document.body.classList.add("pk-pi-checkout");
     try {
@@ -343,6 +349,10 @@ function PeakPaywall({
               {!isAuthenticated ? (
                 <p className="text-sm text-[var(--pk-amber)]">
                   {PAYMENT_ENV.signInHint}
+                </p>
+              ) : product && !catalogPriceOk ? (
+                <p className="text-sm text-[var(--pk-amber)]">
+                  {PAYMENT_ENV.catalogPriceMismatch(product.price_in_pi)}
                 </p>
               ) : productPrice === null ? (
                 <p className="text-sm text-[var(--pk-amber)]">
