@@ -27,6 +27,12 @@ export const PAYMENT_ENV = {
   payTitle: "Unlock full access",
   footer: "Mainnet checkout. Pi is transferred per Pi Network payment rules.",
   signInHint: "Sign in with Pi Browser to load the payment form.",
+  authConnecting: "Connecting to Pi Network…",
+  authFailed: "Could not connect to Pi. Check your network and try again.",
+  piLoginIncomplete:
+    "Pi Browser is open, but login did not finish. Open this app using the exact Production URL from Developer Portal (same address as in the bar above), wait if the connection icon flickers, then tap Try again.",
+  noUnlockProduct:
+    "No unlock product loaded. Set NEXT_PUBLIC_PEAKS_UNLOCK_PRODUCT_ID on Vercel to your Portal product id (3.141 π) and redeploy.",
   loadingProduct:
     "Loading unlock product from Pi… If this stays empty, check Developer Portal catalog sync.",
   catalogPriceMismatch: (catalog: number) =>

@@ -14,6 +14,11 @@ import {
   catalogPriceMatchesUnlock,
 } from "@/lib/payment-env";
 import {
+  paywallAuthHint,
+  paywallShowRetry,
+} from "@/lib/paywall-auth-hint";
+import { resolveUnlockProduct } from "@/lib/resolve-unlock-product";
+import {
   bandOf,
   continentName,
   getPeakById,
@@ -129,17 +134,37 @@ function PeakPaywall({
   onUnlocked: () => void;
   onPurchaseSealed: () => void;
 }) {
-  const { sdk, products, restoredPurchases, refreshPurchases, isAuthenticated, hasError } =
-    usePiAuth();
+  const {
+    sdk,
+    products,
+    restoredPurchases,
+    refreshPurchases,
+    isAuthenticated,
+    hasError,
+    authMessage,
+    reinitialize,
+  } = usePiAuth();
   const { toast } = usePeaks();
   const [busy, setBusy] = useState(false);
   const [localDeed, setLocalDeed] = useState<OwnershipDeed | null>(null);
   const [checkTimedOut, setCheckTimedOut] = useState(false);
 
   const product = useMemo(
-    () => products?.find((p) => p.id === PEAK_DETAIL_PRODUCT_ID) ?? null,
+    () => resolveUnlockProduct(products, PEAK_DETAIL_PRODUCT_ID),
     [products],
   );
+  const productsLoaded = products !== null;
+  const authHint = paywallAuthHint({
+    isAuthenticated,
+    hasError,
+    authMessage,
+    productsLoaded,
+  });
+  const showAuthRetry = paywallShowRetry({
+    isAuthenticated,
+    hasError,
+    productsLoaded,
+  });
 
   const catalogPriceOk =
     product != null && catalogPriceMatchesUnlock(product.price_in_pi);
@@ -347,16 +372,16 @@ function PeakPaywall({
           <>
             <div className="mt-5 rounded-2xl border border-[var(--pk-line)] bg-black/25 px-4 py-3">
               {!isAuthenticated ? (
-                <p className="text-sm text-[var(--pk-amber)]">
-                  {PAYMENT_ENV.signInHint}
-                </p>
+                <p className="text-sm text-[var(--pk-amber)]">{authHint}</p>
               ) : product && !catalogPriceOk ? (
                 <p className="text-sm text-[var(--pk-amber)]">
                   {PAYMENT_ENV.catalogPriceMismatch(product.price_in_pi)}
                 </p>
               ) : productPrice === null ? (
                 <p className="text-sm text-[var(--pk-amber)]">
-                  {PAYMENT_ENV.loadingProduct}
+                  {product
+                    ? PAYMENT_ENV.loadingProduct
+                    : PAYMENT_ENV.noUnlockProduct}
                 </p>
               ) : (
                 <>
@@ -370,18 +395,29 @@ function PeakPaywall({
               )}
             </div>
 
-            <Button
-              onClick={handlePay}
-              variant="primary"
-              className="mt-5 w-full py-3.5"
-              disabled={productPrice === null || !sdk || busy}
-            >
-              {busy
-                ? PAYMENT_ENV.busyLabel
-                : productPrice !== null
-                  ? PAYMENT_ENV.buttonLabel(productPrice)
-                  : PAYMENT_ENV.unavailable}
-            </Button>
+            {showAuthRetry ? (
+              <Button
+                onClick={() => void reinitialize()}
+                variant="primary"
+                className="mt-5 w-full py-3.5"
+                disabled={busy}
+              >
+                Try Pi login again
+              </Button>
+            ) : (
+              <Button
+                onClick={handlePay}
+                variant="primary"
+                className="mt-5 w-full py-3.5"
+                disabled={productPrice === null || !sdk || busy}
+              >
+                {busy
+                  ? PAYMENT_ENV.busyLabel
+                  : productPrice !== null
+                    ? PAYMENT_ENV.buttonLabel(productPrice)
+                    : PAYMENT_ENV.unavailable}
+              </Button>
+            )}
             <p className="mt-3 text-center text-[0.75rem] leading-relaxed text-[var(--pk-faint)]">
               {PAYMENT_ENV.footer}
             </p>
