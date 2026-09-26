@@ -1,0 +1,3710 @@
+{
+  "continent": "oceania",
+  "peaks": [
+    {
+      "id": "puncak-jaya-350",
+      "name": "Puncak Jaya",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4884,
+      "continent": "oceania",
+      "lat": -4.07861,
+      "lon": 137.15833,
+      "facts": [
+        "Elevation 4,884 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": null,
+      "summary": "Puncak Jaya rises 4,884 m in Indonesia, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "sumantri-354",
+      "name": "Sumantri",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4870,
+      "continent": "oceania",
+      "lat": -4.05278,
+      "lon": 137.16694,
+      "facts": [
+        "Elevation 4,870 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": 350,
+      "summary": "Sumantri rises 4,870 m in Indonesia, with 350 m of topographic prominence, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ngga-pulu-355",
+      "name": "Ngga Pulu",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4862,
+      "continent": "oceania",
+      "lat": -4.06417,
+      "lon": 137.18194,
+      "facts": [
+        "Elevation 4,862 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": 100,
+      "summary": "Ngga Pulu rises 4,862 m in Indonesia, with 100 m of topographic prominence, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "osua-sukarno-timur-368",
+      "name": "Osua Sukarno Timur",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4820,
+      "continent": "oceania",
+      "lat": -4.08333,
+      "lon": 137.185,
+      "facts": [
+        "Elevation 4,820 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": null,
+      "summary": "Osua Sukarno Timur rises 4,820 m in Indonesia, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "puncak-mandala-382",
+      "name": "Puncak Mandala",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4760,
+      "continent": "oceania",
+      "lat": -4.70831,
+      "lon": 140.28917,
+      "facts": [
+        "Elevation 4,760 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": 2758,
+      "summary": "Puncak Mandala rises 4,760 m in Indonesia, with 2,758 m of topographic prominence, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "osua-trikora-386",
+      "name": "Osua Trikora",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4750,
+      "continent": "oceania",
+      "lat": -4.26251,
+      "lon": 138.68112,
+      "facts": [
+        "Elevation 4,750 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": null,
+      "summary": "Osua Trikora rises 4,750 m in Indonesia, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ngga-pilimsit-395",
+      "name": "Ngga Pilimsit",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4717,
+      "continent": "oceania",
+      "lat": -4.03556,
+      "lon": 137.05917,
+      "facts": [
+        "Elevation 4,717 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": 557,
+      "summary": "Ngga Pilimsit rises 4,717 m in Indonesia, with 557 m of topographic prominence, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "middenspits-462",
+      "name": "Middenspits",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sudirman Range",
+      "elevationM": 4574,
+      "continent": "oceania",
+      "lat": -4.07626,
+      "lon": 137.17263,
+      "facts": [
+        "Elevation 4,574 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Middenspits rises 4,574 m in Indonesia within the Sudirman Range, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-wilhelm-493",
+      "name": "Mount Wilhelm",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 4509,
+      "continent": "oceania",
+      "lat": -5.77916,
+      "lon": 145.02966,
+      "facts": [
+        "Elevation 4,509 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 2969,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Wilhelm rises 4,509 m in Papua New Guinea within the New Guinea Highlands, with 2,969 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "wachter-505",
+      "name": "Wachter",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4478,
+      "continent": "oceania",
+      "lat": -4.05648,
+      "lon": 137.14336,
+      "facts": [
+        "Elevation 4,478 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "prominenceM": null,
+      "summary": "Wachter rises 4,478 m in Indonesia, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "uitkijk-522",
+      "name": "Uitkijk",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4438,
+      "continent": "oceania",
+      "lat": -4.05922,
+      "lon": 137.15581,
+      "facts": [
+        "Elevation 4,438 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "prominenceM": null,
+      "summary": "Uitkijk rises 4,438 m in Indonesia, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-giluwe-548",
+      "name": "Mount Giluwe",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 4368,
+      "continent": "oceania",
+      "lat": -6.05,
+      "lon": 143.88333,
+      "facts": [
+        "Elevation 4,368 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 2507,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Giluwe rises 4,368 m in Papua New Guinea within the New Guinea Highlands, with 2,507 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "gunung-darwin-597",
+      "name": "Gunung Darwin",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sudirman Range",
+      "elevationM": 4213,
+      "continent": "oceania",
+      "lat": -4.01454,
+      "lon": 136.78757,
+      "facts": [
+        "Elevation 4,213 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Gunung Darwin rises 4,213 m in Indonesia within the Sudirman Range, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "osua-emma-613",
+      "name": "Osua Emma",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4173,
+      "continent": "oceania",
+      "lat": -4.17778,
+      "lon": 138.4804,
+      "facts": [
+        "Elevation 4,173 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "prominenceM": null,
+      "summary": "Osua Emma rises 4,173 m in Indonesia, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-bangeta-640",
+      "name": "Mount Bangeta",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 4121,
+      "continent": "oceania",
+      "lat": -6.31667,
+      "lon": 147.08333,
+      "facts": [
+        "Elevation 4,121 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 1701,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Bangeta rises 4,121 m in Papua New Guinea within the New Guinea Highlands, with 1,701 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "osua-annin-661",
+      "name": "Osua Annin",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4087,
+      "continent": "oceania",
+      "lat": -4.68294,
+      "lon": 140.08212,
+      "facts": [
+        "Elevation 4,087 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "prominenceM": null,
+      "summary": "Osua Annin rises 4,087 m in Indonesia, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "osua-dirks-669",
+      "name": "Osua Dirks",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "PK",
+      "elevationM": 4079,
+      "continent": "oceania",
+      "lat": -4.75522,
+      "lon": 140.34406,
+      "facts": [
+        "Elevation 4,079 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "prominenceM": null,
+      "summary": "Osua Dirks rises 4,079 m in Indonesia, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-victoria-674",
+      "name": "Mount Victoria",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 4072,
+      "continent": "oceania",
+      "lat": -8.8925,
+      "lon": 147.53333,
+      "facts": [
+        "Elevation 4,072 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 2738,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Victoria rises 4,072 m in Papua New Guinea within the New Guinea Highlands, with 2,738 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "mount-kabangama-681",
+      "name": "Mount Kabangama",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 4062,
+      "continent": "oceania",
+      "lat": -6.06042,
+      "lon": 144.6151,
+      "facts": [
+        "Elevation 4,062 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Kabangama rises 4,062 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-zaagkam-693",
+      "name": "Mount Zaagkam",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sudirman Range",
+      "elevationM": 4042,
+      "continent": "oceania",
+      "lat": -4.1325,
+      "lon": 137.11889,
+      "facts": [
+        "Elevation 4,042 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Zaagkam rises 4,042 m in Indonesia within the Sudirman Range, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-sarawaket-730",
+      "name": "Mount Sarawaket",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3993,
+      "continent": "oceania",
+      "lat": -6.3005,
+      "lon": 147.09279,
+      "facts": [
+        "Elevation 3,993 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Sarawaket rises 3,993 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-albert-edward-731",
+      "name": "Mount Albert Edward",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3990,
+      "continent": "oceania",
+      "lat": -8.41192,
+      "lon": 147.40356,
+      "facts": [
+        "Elevation 3,990 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 986,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Albert Edward rises 3,990 m in Papua New Guinea within the New Guinea Highlands, with 986 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "mount-kubor-739",
+      "name": "Mount Kubor",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3969,
+      "continent": "oceania",
+      "lat": -6.10173,
+      "lon": 144.76006,
+      "facts": [
+        "Elevation 3,969 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 580,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Kubor rises 3,969 m in Papua New Guinea within the New Guinea Highlands, with 580 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "gunung-antaros-751",
+      "name": "Gunung Antaros",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sudirman Range",
+      "elevationM": 3946,
+      "continent": "oceania",
+      "lat": -4.89546,
+      "lon": 140.90408,
+      "facts": [
+        "Elevation 3,946 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Gunung Antaros rises 3,946 m in Indonesia within the Sudirman Range, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "dom-769",
+      "name": "Dom",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sudirman Range",
+      "elevationM": 3921,
+      "continent": "oceania",
+      "lat": -4.09865,
+      "lon": 137.1283,
+      "facts": [
+        "Elevation 3,921 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Dom rises 3,921 m in Indonesia within the Sudirman Range, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-platenspits-790",
+      "name": "Gunung Platenspits",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sudirman Range",
+      "elevationM": 3875,
+      "continent": "oceania",
+      "lat": -4.10778,
+      "lon": 137.11972,
+      "facts": [
+        "Elevation 3,875 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Gunung Platenspits rises 3,875 m in Indonesia within the Sudirman Range, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "east-dome-818",
+      "name": "East Dome",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "PK",
+      "elevationM": 3804,
+      "continent": "oceania",
+      "lat": -8.40812,
+      "lon": 147.41139,
+      "facts": [
+        "Elevation 3,804 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "prominenceM": null,
+      "summary": "East Dome rises 3,804 m in Papua New Guinea, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-iguntam-819",
+      "name": "Mount Iguntam",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3802,
+      "continent": "oceania",
+      "lat": -5.68847,
+      "lon": 144.99707,
+      "facts": [
+        "Elevation 3,802 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Iguntam rises 3,802 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-hagen-827",
+      "name": "Mount Hagen",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3778,
+      "continent": "oceania",
+      "lat": -5.73402,
+      "lon": 144.0405,
+      "facts": [
+        "Elevation 3,778 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 900,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Hagen rises 3,778 m in Papua New Guinea within the New Guinea Highlands, with 900 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "mount-kegeraga-835",
+      "name": "Mount Kegeraga",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3741,
+      "continent": "oceania",
+      "lat": -6.03399,
+      "lon": 144.39408,
+      "facts": [
+        "Elevation 3,741 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Kegeraga rises 3,741 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "aoraki-mount-cook-841",
+      "name": "Aoraki / Mount Cook",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "Southern Alps",
+      "elevationM": 3724,
+      "continent": "oceania",
+      "lat": -43.59499,
+      "lon": 170.14166,
+      "facts": [
+        "Elevation 3,724 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": 3724,
+      "formationType": "fold",
+      "naturalFeatures": "permanent snow and glaciers, alpine climate",
+      "summary": "Aoraki / Mount Cook rises 3,724 m in New Zealand within the Southern Alps, with 3,724 m of topographic prominence, shaped by fold (orogenic) forces, with permanent snow and glaciers, alpine climate."
+    },
+    {
+      "id": "english-peaks-842",
+      "name": "English Peaks",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3723,
+      "continent": "oceania",
+      "lat": -8.75418,
+      "lon": 147.48875,
+      "facts": [
+        "Elevation 3,723 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "English Peaks rises 3,723 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-kusiwigasi-855",
+      "name": "Mount Kusiwigasi",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3684,
+      "continent": "oceania",
+      "lat": -4.95354,
+      "lon": 141.05773,
+      "facts": [
+        "Elevation 3,684 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Kusiwigasi rises 3,684 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-suckling-856",
+      "name": "Mount Suckling",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3676,
+      "continent": "oceania",
+      "lat": -9.669,
+      "lon": 149.01092,
+      "facts": [
+        "Elevation 3,676 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": 2925,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Suckling rises 3,676 m in Papua New Guinea within the New Guinea Highlands, with 2,925 m of topographic prominence, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "yakopinalenk-mountain-859",
+      "name": "Yakopinalenk Mountain",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 3669,
+      "continent": "oceania",
+      "lat": -5.15163,
+      "lon": 143.3083,
+      "facts": [
+        "Elevation 3,669 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Yakopinalenk Mountain rises 3,669 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "foho-tatamailau-1086",
+      "name": "Foho Tatamailau",
+      "country": "Timor-Leste",
+      "countryCode": "TL",
+      "range": null,
+      "elevationM": 2963,
+      "continent": "oceania",
+      "lat": -8.90639,
+      "lon": 125.49306,
+      "facts": [
+        "Elevation 2,963 m above sea level.",
+        "Located in Timor-Leste. (TL)"
+      ],
+      "prominenceM": 2963,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Foho Tatamailau rises 2,963 m in Timor-Leste, with 2,963 m of topographic prominence, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "paratetaitonga-1303",
+      "name": "Paratetaitonga",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "New Zealand Alps / North Island Ranges",
+      "elevationM": 2535,
+      "continent": "oceania",
+      "lat": -39.28333,
+      "lon": 175.56667,
+      "facts": [
+        "Elevation 2,535 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Paratetaitonga rises 2,535 m in New Zealand within the New Zealand Alps / North Island Ranges, shaped by fold (orogenic) forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-popomanaseu-1519",
+      "name": "Mount Popomanaseu",
+      "country": "Solomon Islands",
+      "countryCode": "SB",
+      "range": "Melanesian Arc",
+      "elevationM": 2335,
+      "continent": "oceania",
+      "lat": -9.70346,
+      "lon": 160.06197,
+      "facts": [
+        "Elevation 2,335 m above sea level.",
+        "Located in Solomon Islands. (SB)"
+      ],
+      "prominenceM": 2335,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Popomanaseu rises 2,335 m in Solomon Islands within the Melanesian Arc, with 2,335 m of topographic prominence, shaped by volcanic activity, with no permanent snow, tropical highland climate."
+    },
+    {
+      "id": "mount-makarakomburu-1549",
+      "name": "Mount Makarakomburu",
+      "country": "Solomon Islands",
+      "countryCode": "SB",
+      "range": "Melanesian Arc",
+      "elevationM": 2310,
+      "continent": "oceania",
+      "lat": -9.71498,
+      "lon": 160.03209,
+      "facts": [
+        "Elevation 2,310 m above sea level.",
+        "Located in Solomon Islands. (SB)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Makarakomburu rises 2,310 m in Solomon Islands within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "sambahatangi-1591",
+      "name": "Sambahatangi",
+      "country": "Solomon Islands",
+      "countryCode": "SB",
+      "range": "Melanesian Arc",
+      "elevationM": 2267,
+      "continent": "oceania",
+      "lat": -9.7044,
+      "lon": 160.06762,
+      "facts": [
+        "Elevation 2,267 m above sea level.",
+        "Located in Solomon Islands. (SB)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Sambahatangi rises 2,267 m in Solomon Islands within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-kosciuszko-1620",
+      "name": "Mount Kosciuszko",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2228,
+      "continent": "oceania",
+      "lat": -36.456,
+      "lon": 148.2635,
+      "facts": [
+        "Elevation 2,228 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 2228,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Kosciuszko rises 2,228 m in Australia within the Great Dividing Range, with 2,228 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate highland climate."
+    },
+    {
+      "id": "mount-townsend-1635",
+      "name": "Mount Townsend",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2209,
+      "continent": "oceania",
+      "lat": -36.42266,
+      "lon": 148.2587,
+      "facts": [
+        "Elevation 2,209 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 189,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Townsend rises 2,209 m in Australia within the Great Dividing Range, with 189 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate highland climate."
+    },
+    {
+      "id": "mount-twynam-1645",
+      "name": "Mount Twynam",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2196,
+      "continent": "oceania",
+      "lat": -36.39259,
+      "lon": 148.31474,
+      "facts": [
+        "Elevation 2,196 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 155,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Twynam rises 2,196 m in Australia within the Great Dividing Range, with 155 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate highland climate."
+    },
+    {
+      "id": "rams-head-1653",
+      "name": "Rams Head",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2190,
+      "continent": "oceania",
+      "lat": -36.49184,
+      "lon": 148.25964,
+      "facts": [
+        "Elevation 2,190 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Rams Head rises 2,190 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "unnamed-peak-on-etheridge-ridge-1661",
+      "name": "Unnamed peak on Etheridge Ridge",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2180,
+      "continent": "oceania",
+      "lat": -36.45847,
+      "lon": 148.27217,
+      "facts": [
+        "Elevation 2,180 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Unnamed peak on Etheridge Ridge rises 2,180 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "rams-head-north-1664",
+      "name": "Rams Head North",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2177,
+      "continent": "oceania",
+      "lat": -36.48242,
+      "lon": 148.26994,
+      "facts": [
+        "Elevation 2,177 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Rams Head North rises 2,177 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "alice-rawson-peak-1672",
+      "name": "Alice Rawson Peak",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2160,
+      "continent": "oceania",
+      "lat": -36.41808,
+      "lon": 148.26264,
+      "facts": [
+        "Elevation 2,160 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Alice Rawson Peak rises 2,160 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "byatts-camp-1673",
+      "name": "Byatts Camp",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "PK",
+      "elevationM": 2159,
+      "continent": "oceania",
+      "lat": -36.43003,
+      "lon": 148.24754,
+      "facts": [
+        "Elevation 2,159 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "prominenceM": null,
+      "summary": "Byatts Camp rises 2,159 m in Australia, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "abbott-peak-1684",
+      "name": "Abbott Peak",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "PK",
+      "elevationM": 2145,
+      "continent": "oceania",
+      "lat": -36.42865,
+      "lon": 148.25243,
+      "facts": [
+        "Elevation 2,145 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "prominenceM": null,
+      "summary": "Abbott Peak rises 2,145 m in Australia, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "carruthers-peak-1685",
+      "name": "Carruthers peak",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "PK",
+      "elevationM": 2145,
+      "continent": "oceania",
+      "lat": -36.41,
+      "lon": 148.2914,
+      "facts": [
+        "Elevation 2,145 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "prominenceM": 85,
+      "summary": "Carruthers peak rises 2,145 m in Australia, with 85 m of topographic prominence, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ben-nevis-1694",
+      "name": "Ben Nevis",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "PK",
+      "elevationM": 2122,
+      "continent": "oceania",
+      "lat": -45.16667,
+      "lon": 168.85,
+      "facts": [
+        "Elevation 2,122 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, alpine climate",
+      "prominenceM": null,
+      "summary": "Ben Nevis rises 2,122 m in New Zealand, with no permanent snow, alpine climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-northcote-1705",
+      "name": "Mount Northcote",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2112,
+      "continent": "oceania",
+      "lat": -36.43111,
+      "lon": 148.27819,
+      "facts": [
+        "Elevation 2,112 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Northcote rises 2,112 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-clarke-1720",
+      "name": "Mount Clarke",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2083,
+      "continent": "oceania",
+      "lat": -36.43397,
+      "lon": 148.28746,
+      "facts": [
+        "Elevation 2,083 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Clarke rises 2,083 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-tate-1738",
+      "name": "Mount Tate",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2068,
+      "continent": "oceania",
+      "lat": -36.35465,
+      "lon": 148.35416,
+      "facts": [
+        "Elevation 2,068 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 188,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Tate rises 2,068 m in Australia within the Great Dividing Range, with 188 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate highland climate."
+    },
+    {
+      "id": "mount-jagungal-1746",
+      "name": "Mount Jagungal",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2061,
+      "continent": "oceania",
+      "lat": -36.14886,
+      "lon": 148.38734,
+      "facts": [
+        "Elevation 2,061 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Jagungal rises 2,061 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "south-rams-head-1755",
+      "name": "South Rams Head",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2052,
+      "continent": "oceania",
+      "lat": -36.50928,
+      "lon": 148.24745,
+      "facts": [
+        "Elevation 2,052 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "South Rams Head rises 2,052 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-lee-1756",
+      "name": "Mount Lee",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2049,
+      "continent": "oceania",
+      "lat": -36.41975,
+      "lon": 148.28516,
+      "facts": [
+        "Elevation 2,049 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Lee rises 2,049 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-tanareirei-1767",
+      "name": "Mount Tanareirei",
+      "country": "Solomon Islands",
+      "countryCode": "SB",
+      "range": "Melanesian Arc",
+      "elevationM": 2035,
+      "continent": "oceania",
+      "lat": -9.72669,
+      "lon": 160.08316,
+      "facts": [
+        "Elevation 2,035 m above sea level.",
+        "Located in Solomon Islands. (SB)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Mount Tanareirei rises 2,035 m in Solomon Islands within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "pusung-jarat-1768",
+      "name": "Pusung Jarat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 2035,
+      "continent": "oceania",
+      "lat": -7.9905,
+      "lon": 112.9027,
+      "facts": [
+        "Elevation 2,035 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical highland climate",
+      "summary": "Pusung Jarat rises 2,035 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-stilwell-1783",
+      "name": "Mount Stilwell",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2023,
+      "continent": "oceania",
+      "lat": -36.44696,
+      "lon": 148.32686,
+      "facts": [
+        "Elevation 2,023 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Stilwell rises 2,023 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "back-perisher-mountain-1805",
+      "name": "Back Perisher Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 2003,
+      "continent": "oceania",
+      "lat": -36.39959,
+      "lon": 148.39141,
+      "facts": [
+        "Elevation 2,003 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Back Perisher Mountain rises 2,003 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-bogong-1825",
+      "name": "Mount Bogong",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1986,
+      "continent": "oceania",
+      "lat": -36.73236,
+      "lon": 147.30597,
+      "facts": [
+        "Elevation 1,986 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 1233,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Bogong rises 1,986 m in Australia within the Great Dividing Range, with 1,233 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate highland climate."
+    },
+    {
+      "id": "dicky-cooper-bogong-1831",
+      "name": "Dicky Cooper Bogong",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1982,
+      "continent": "oceania",
+      "lat": -36.29092,
+      "lon": 148.37291,
+      "facts": [
+        "Elevation 1,982 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Dicky Cooper Bogong rises 1,982 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-anton-1833",
+      "name": "Mount Anton",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1981,
+      "continent": "oceania",
+      "lat": -36.38443,
+      "lon": 148.328,
+      "facts": [
+        "Elevation 1,981 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Anton rises 1,981 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "the-granite-peaks-1838",
+      "name": "The Granite Peaks",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "PK",
+      "elevationM": 1979,
+      "continent": "oceania",
+      "lat": -36.3147,
+      "lon": 148.37255,
+      "facts": [
+        "Elevation 1,979 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "prominenceM": null,
+      "summary": "The Granite Peaks rises 1,979 m in Australia, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "big-brassy-peak-1847",
+      "name": "Big Brassy Peak",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "PK",
+      "elevationM": 1962,
+      "continent": "oceania",
+      "lat": -36.24005,
+      "lon": 148.43442,
+      "facts": [
+        "Elevation 1,962 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "prominenceM": null,
+      "summary": "Big Brassy Peak rises 1,962 m in Australia, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-anderson-1852",
+      "name": "Mount Anderson",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1955,
+      "continent": "oceania",
+      "lat": -36.37054,
+      "lon": 148.33323,
+      "facts": [
+        "Elevation 1,955 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Anderson rises 1,955 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-namolava-1867",
+      "name": "Mount Namolava",
+      "country": "Solomon Islands",
+      "countryCode": "SB",
+      "range": "Melanesian Arc",
+      "elevationM": 1938,
+      "continent": "oceania",
+      "lat": -9.73812,
+      "lon": 159.99378,
+      "facts": [
+        "Elevation 1,938 m above sea level.",
+        "Located in Solomon Islands. (SB)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Namolava rises 1,938 m in Solomon Islands within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-porcupine-1868",
+      "name": "Mount Porcupine",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1935,
+      "continent": "oceania",
+      "lat": -36.27188,
+      "lon": 148.44809,
+      "facts": [
+        "Elevation 1,935 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Porcupine rises 1,935 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-feathertop-1878",
+      "name": "Mount Feathertop",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1922,
+      "continent": "oceania",
+      "lat": -36.89428,
+      "lon": 147.13749,
+      "facts": [
+        "Elevation 1,922 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 562,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Feathertop rises 1,922 m in Australia within the Great Dividing Range, with 562 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate highland climate."
+    },
+    {
+      "id": "porcupine-spur-1880",
+      "name": "Porcupine Spur",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1920,
+      "continent": "oceania",
+      "lat": -36.2652,
+      "lon": 148.4512,
+      "facts": [
+        "Elevation 1,920 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Porcupine Spur rises 1,920 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "blue-calf-mountain-1890",
+      "name": "Blue Calf Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1902,
+      "continent": "oceania",
+      "lat": -36.38717,
+      "lon": 148.39398,
+      "facts": [
+        "Elevation 1,902 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Blue Calf Mountain rises 1,902 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "west-peak-1892",
+      "name": "West Peak",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "PK",
+      "elevationM": 1902,
+      "continent": "oceania",
+      "lat": -36.73958,
+      "lon": 147.27792,
+      "facts": [
+        "Elevation 1,902 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "prominenceM": null,
+      "summary": "West Peak rises 1,902 m in Australia, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "brassy-mountains-1899",
+      "name": "Brassy Mountains",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1896,
+      "continent": "oceania",
+      "lat": -36.23932,
+      "lon": 148.42882,
+      "facts": [
+        "Elevation 1,896 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Brassy Mountains rises 1,896 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "blue-cow-mountain-1904",
+      "name": "Blue Cow Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1890,
+      "continent": "oceania",
+      "lat": -36.37829,
+      "lon": 148.39381,
+      "facts": [
+        "Elevation 1,890 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Blue Cow Mountain rises 1,890 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-wheatley-1905",
+      "name": "Mount Wheatley",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1890,
+      "continent": "oceania",
+      "lat": -36.42076,
+      "lon": 148.39706,
+      "facts": [
+        "Elevation 1,890 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Wheatley rises 1,890 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "knob-hill-1909",
+      "name": "Knob Hill",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1887,
+      "continent": "oceania",
+      "lat": -36.4985,
+      "lon": 148.3512,
+      "facts": [
+        "Elevation 1,887 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Knob Hill rises 1,887 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-fainter-south-1911",
+      "name": "Mount Fainter South",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1883,
+      "continent": "oceania",
+      "lat": -36.8543,
+      "lon": 147.18959,
+      "facts": [
+        "Elevation 1,883 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Fainter South rises 1,883 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-nelson-1915",
+      "name": "Mount Nelson",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1880,
+      "continent": "oceania",
+      "lat": -36.84403,
+      "lon": 147.33986,
+      "facts": [
+        "Elevation 1,880 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Nelson rises 1,880 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "tabwemasana-1918",
+      "name": "Tabwémasana",
+      "country": "Vanuatu",
+      "countryCode": "VU",
+      "range": "PK",
+      "elevationM": 1877,
+      "continent": "oceania",
+      "lat": -15.36667,
+      "lon": 166.75,
+      "facts": [
+        "Elevation 1,877 m above sea level.",
+        "Located in Vanuatu. (VU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Tabwémasana rises 1,877 m in Vanuatu, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-nelse-north-1921",
+      "name": "Mount Nelse North",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1869,
+      "continent": "oceania",
+      "lat": -36.83223,
+      "lon": 147.33883,
+      "facts": [
+        "Elevation 1,869 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Nelse North rises 1,869 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-loch-1924",
+      "name": "Mount Loch",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1865,
+      "continent": "oceania",
+      "lat": -36.95708,
+      "lon": 147.15625,
+      "facts": [
+        "Elevation 1,865 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Loch rises 1,865 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-guthrie-1929",
+      "name": "Mount Guthrie",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1862,
+      "continent": "oceania",
+      "lat": -36.42907,
+      "lon": 148.33679,
+      "facts": [
+        "Elevation 1,862 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Guthrie rises 1,862 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-hotham-1932",
+      "name": "Mount Hotham",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1861,
+      "continent": "oceania",
+      "lat": -36.97712,
+      "lon": 147.13303,
+      "facts": [
+        "Elevation 1,861 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Hotham rises 1,861 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-siope-1965",
+      "name": "Mount Siope",
+      "country": "Samoa",
+      "countryCode": "WS",
+      "range": null,
+      "elevationM": 1813,
+      "continent": "oceania",
+      "lat": -13.62717,
+      "lon": -172.47021,
+      "facts": [
+        "Elevation 1,813 m above sea level.",
+        "Located in Samoa. (WS)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Siope rises 1,813 m in Samoa, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-olympus-1968",
+      "name": "Mount Olympus",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "Southern Alps",
+      "elevationM": 1811,
+      "continent": "oceania",
+      "lat": -43.18333,
+      "lon": 171.61667,
+      "facts": [
+        "Elevation 1,811 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Olympus rises 1,811 m in New Zealand within the Southern Alps, shaped by fold (orogenic) forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-stanley-2014",
+      "name": "Mount Stanley",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "Southern Alps",
+      "elevationM": 1761,
+      "continent": "oceania",
+      "lat": -42.26667,
+      "lon": 172.68333,
+      "facts": [
+        "Elevation 1,761 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Stanley rises 1,761 m in New Zealand within the Southern Alps, shaped by fold (orogenic) forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-mata-aga-2092",
+      "name": "Mount Mata’aga",
+      "country": "Samoa",
+      "countryCode": "WS",
+      "range": null,
+      "elevationM": 1681,
+      "continent": "oceania",
+      "lat": -13.62092,
+      "lon": -172.44735,
+      "facts": [
+        "Elevation 1,681 m above sea level.",
+        "Located in Samoa. (WS)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Mata’aga rises 1,681 m in Samoa, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mont-panie-2122",
+      "name": "Mont Panié",
+      "country": "New Caledonia",
+      "countryCode": "NC",
+      "range": "PK",
+      "elevationM": 1628,
+      "continent": "oceania",
+      "lat": -20.5882,
+      "lon": 164.7708,
+      "facts": [
+        "Elevation 1,628 m above sea level.",
+        "Located in New Caledonia. (NC)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": 1628,
+      "summary": "Mont Panié rises 1,628 m in New Caledonia, with 1,628 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-baratun-2149",
+      "name": "Mount Baratun",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 1596,
+      "continent": "oceania",
+      "lat": -9.91667,
+      "lon": 149.28333,
+      "facts": [
+        "Elevation 1,596 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Baratun rises 1,596 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "manjar-2164",
+      "name": "Manjar",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1578,
+      "continent": "oceania",
+      "lat": -35.97131,
+      "lon": 148.3233,
+      "facts": [
+        "Elevation 1,578 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Manjar rises 1,578 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "dolok-cengkeh-barat-2209",
+      "name": "Dolok Cengkeh Barat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 1527,
+      "continent": "oceania",
+      "lat": 3.1403,
+      "lon": 98.1232,
+      "facts": [
+        "Elevation 1,527 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Dolok Cengkeh Barat rises 1,527 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-winstanley-2229",
+      "name": "Mount Winstanley",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1503,
+      "continent": "oceania",
+      "lat": -37.10014,
+      "lon": 146.45209,
+      "facts": [
+        "Elevation 1,503 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate highland climate",
+      "summary": "Mount Winstanley rises 1,503 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate highland climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-olympus-2245",
+      "name": "Mount Olympus",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 1472,
+      "continent": "oceania",
+      "lat": -42.04,
+      "lon": 146.11,
+      "facts": [
+        "Elevation 1,472 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 592,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Mount Olympus rises 1,472 m in Australia within the Australian Highlands, with 592 m of topographic prominence, shaped by other geological forces, with no permanent snow, temperate climate."
+    },
+    {
+      "id": "me-maoya-2263",
+      "name": "Mé Maoya",
+      "country": "New Caledonia",
+      "countryCode": "NC",
+      "range": "Melanesian Arc",
+      "elevationM": 1436,
+      "continent": "oceania",
+      "lat": -21.36667,
+      "lon": 165.33333,
+      "facts": [
+        "Elevation 1,436 m above sea level.",
+        "Located in New Caledonia. (NC)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mé Maoya rises 1,436 m in New Caledonia within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "maratjara-2276",
+      "name": "Maratjara",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 1413,
+      "continent": "oceania",
+      "lat": -26.3189,
+      "lon": 131.74525,
+      "facts": [
+        "Elevation 1,413 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Maratjara rises 1,413 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "bukit-jarat-2280",
+      "name": "Bukit Jarat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 1399,
+      "continent": "oceania",
+      "lat": -0.48997,
+      "lon": 100.39415,
+      "facts": [
+        "Elevation 1,399 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Bukit Jarat rises 1,399 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-paratu-2319",
+      "name": "Gunung Paratu",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 1332,
+      "continent": "oceania",
+      "lat": 3.84298,
+      "lon": 116.06532,
+      "facts": [
+        "Elevation 1,332 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Paratu rises 1,332 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "tomanivi-2328",
+      "name": "Tomanivi",
+      "country": "Fiji",
+      "countryCode": "FJ",
+      "range": "Melanesian Arc",
+      "elevationM": 1324,
+      "continent": "oceania",
+      "lat": -17.61425,
+      "lon": 178.01849,
+      "facts": [
+        "Elevation 1,324 m above sea level.",
+        "Located in Fiji. (FJ)"
+      ],
+      "prominenceM": 1324,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Tomanivi rises 1,324 m in Fiji within the Melanesian Arc, with 1,324 m of topographic prominence, shaped by volcanic activity, with no permanent snow, tropical climate."
+    },
+    {
+      "id": "snowdon-2331",
+      "name": "Snowdon",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "PK",
+      "elevationM": 1315,
+      "continent": "oceania",
+      "lat": -45.28333,
+      "lon": 168.05,
+      "facts": [
+        "Elevation 1,315 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "prominenceM": null,
+      "summary": "Snowdon rises 1,315 m in New Zealand, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "matterhorn-2332",
+      "name": "Matterhorn",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "PK",
+      "elevationM": 1314,
+      "continent": "oceania",
+      "lat": -45.55,
+      "lon": 167.16667,
+      "facts": [
+        "Elevation 1,314 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "prominenceM": null,
+      "summary": "Matterhorn rises 1,314 m in New Zealand, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "uluiqalau-2386",
+      "name": "Uluiqalau",
+      "country": "Fiji",
+      "countryCode": "FJ",
+      "range": "Melanesian Arc",
+      "elevationM": 1213,
+      "continent": "oceania",
+      "lat": -16.8985,
+      "lon": 179.98768,
+      "facts": [
+        "Elevation 1,213 m above sea level.",
+        "Located in Fiji. (FJ)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Uluiqalau rises 1,213 m in Fiji within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "koroyanitu-2396",
+      "name": "Koroyanitu",
+      "country": "Fiji",
+      "countryCode": "FJ",
+      "range": "PK",
+      "elevationM": 1195,
+      "continent": "oceania",
+      "lat": -17.66771,
+      "lon": 177.57442,
+      "facts": [
+        "Elevation 1,195 m above sea level.",
+        "Located in Fiji. (FJ)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Koroyanitu rises 1,195 m in Fiji, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "table-mountain-2415",
+      "name": "Table Mountain",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "Southern Alps",
+      "elevationM": 1159,
+      "continent": "oceania",
+      "lat": -44.76667,
+      "lon": 167.55,
+      "facts": [
+        "Elevation 1,159 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Table Mountain rises 1,159 m in New Zealand within the Southern Alps, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ben-nevis-2430",
+      "name": "Ben Nevis",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 1135,
+      "continent": "oceania",
+      "lat": -41.41,
+      "lon": 147.62,
+      "facts": [
+        "Elevation 1,135 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Ben Nevis rises 1,135 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "pyramid-2445",
+      "name": "Pyramid",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1113,
+      "continent": "oceania",
+      "lat": -35.47843,
+      "lon": 148.92713,
+      "facts": [
+        "Elevation 1,113 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Pyramid rises 1,113 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-cook-2486",
+      "name": "Mount Cook",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1050,
+      "continent": "oceania",
+      "lat": -37.06236,
+      "lon": 147.68069,
+      "facts": [
+        "Elevation 1,050 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Mount Cook rises 1,050 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-stanley-2490",
+      "name": "Mount Stanley",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 1042,
+      "continent": "oceania",
+      "lat": -36.45125,
+      "lon": 146.80264,
+      "facts": [
+        "Elevation 1,042 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Mount Stanley rises 1,042 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "buntu-taratak-2507",
+      "name": "Buntu Taratak",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 1011,
+      "continent": "oceania",
+      "lat": -2.5773,
+      "lon": 120.1267,
+      "facts": [
+        "Elevation 1,011 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Buntu Taratak rises 1,011 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-kao-2511",
+      "name": "Mount Kao",
+      "country": "Tonga",
+      "countryCode": "TO",
+      "range": "VLC",
+      "elevationM": 1009,
+      "continent": "oceania",
+      "lat": -19.66875,
+      "lon": -175.01347,
+      "facts": [
+        "Elevation 1,009 m above sea level.",
+        "Located in Tonga. (TO)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": 1030,
+      "summary": "Mount Kao rises 1,009 m in Tonga, with 1,030 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "nevis-2526",
+      "name": "Nevis",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 983,
+      "continent": "oceania",
+      "lat": -42.94,
+      "lon": 146.64999,
+      "facts": [
+        "Elevation 983 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Nevis rises 983 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "lata-mountain-2563",
+      "name": "Lata Mountain",
+      "country": "American Samoa",
+      "countryCode": "AS",
+      "range": null,
+      "elevationM": 936,
+      "continent": "oceania",
+      "lat": -14.23694,
+      "lon": -169.45694,
+      "facts": [
+        "Elevation 936 m above sea level.",
+        "Located in American Samoa. (AS)"
+      ],
+      "prominenceM": 963,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Lata Mountain rises 936 m in American Samoa, with 963 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "pararata-2579",
+      "name": "Pararata",
+      "country": "Vanuatu",
+      "countryCode": "VU",
+      "range": "Melanesian Arc",
+      "elevationM": 910,
+      "continent": "oceania",
+      "lat": -15.28333,
+      "lon": 166.7,
+      "facts": [
+        "Elevation 910 m above sea level.",
+        "Located in Vanuatu. (VU)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Pararata rises 910 m in Vanuatu within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-asuncion-2593",
+      "name": "Mount Asuncion",
+      "country": "Northern Mariana Islands",
+      "countryCode": "MP",
+      "range": null,
+      "elevationM": 891,
+      "continent": "oceania",
+      "lat": 19.6947,
+      "lon": 145.4042,
+      "facts": [
+        "Elevation 891 m above sea level.",
+        "Located in Northern Mariana Islands. (MP)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Asuncion rises 891 m in Northern Mariana Islands, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "dolok-sombaondarat-2614",
+      "name": "Dolok Sombaondarat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 865,
+      "continent": "oceania",
+      "lat": 1.17505,
+      "lon": 99.20029,
+      "facts": [
+        "Elevation 865 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Dolok Sombaondarat rises 865 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-punaramato-2618",
+      "name": "Gunung Punaramato",
+      "country": "Timor-Leste",
+      "countryCode": "TL",
+      "range": null,
+      "elevationM": 861,
+      "continent": "oceania",
+      "lat": -8.6675,
+      "lon": 126.81167,
+      "facts": [
+        "Elevation 861 m above sea level.",
+        "Located in Timor-Leste. (TL)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Punaramato rises 861 m in Timor-Leste, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "great-table-mountain-2633",
+      "name": "Great Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 845,
+      "continent": "oceania",
+      "lat": -28.64485,
+      "lon": 152.51188,
+      "facts": [
+        "Elevation 845 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Great Table Mountain rises 845 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "table-mountain-2637",
+      "name": "Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 842,
+      "continent": "oceania",
+      "lat": -42.2425,
+      "lon": 147.16169,
+      "facts": [
+        "Elevation 842 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Table Mountain rises 842 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "uluru-ayers-rock-2654",
+      "name": "Uluru / Ayers Rock",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 827,
+      "continent": "oceania",
+      "lat": -25.3415,
+      "lon": 131.0354,
+      "facts": [
+        "Elevation 827 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 348,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Uluru / Ayers Rock rises 827 m in Australia within the Australian Highlands, with 348 m of topographic prominence, shaped by other geological forces, with no permanent snow, subtropical climate."
+    },
+    {
+      "id": "mount-dolohmwar-2690",
+      "name": "Mount Dolohmwar",
+      "country": "Micronesia",
+      "countryCode": "FM",
+      "range": null,
+      "elevationM": 791,
+      "continent": "oceania",
+      "lat": 6.8609,
+      "lon": 158.2357,
+      "facts": [
+        "Elevation 791 m above sea level.",
+        "Located in Micronesia. (FM)"
+      ],
+      "prominenceM": 791,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Dolohmwar rises 791 m in Micronesia, with 791 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-anatahan-2694",
+      "name": "Mount Anatahan",
+      "country": "Northern Mariana Islands",
+      "countryCode": "MP",
+      "range": null,
+      "elevationM": 787,
+      "continent": "oceania",
+      "lat": 16.355,
+      "lon": 145.6564,
+      "facts": [
+        "Elevation 787 m above sea level.",
+        "Located in Northern Mariana Islands. (MP)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Anatahan rises 787 m in Northern Mariana Islands, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-cookson-2695",
+      "name": "Mount Cookson",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "Southern Alps",
+      "elevationM": 787,
+      "continent": "oceania",
+      "lat": -42.55,
+      "lon": 173.15,
+      "facts": [
+        "Elevation 787 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Mount Cookson rises 787 m in New Zealand within the Southern Alps, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-nanlaud-2703",
+      "name": "Mount Nanlaud",
+      "country": "Micronesia",
+      "countryCode": "FM",
+      "range": null,
+      "elevationM": 782,
+      "continent": "oceania",
+      "lat": 6.87556,
+      "lon": 158.22802,
+      "facts": [
+        "Elevation 782 m above sea level.",
+        "Located in Micronesia. (FM)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Nanlaud rises 782 m in Micronesia, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "bairds-table-mountain-2705",
+      "name": "Bairds Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 780,
+      "continent": "oceania",
+      "lat": -19.08361,
+      "lon": 143.84833,
+      "facts": [
+        "Elevation 780 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Bairds Table Mountain rises 780 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "pasir-karamat-2710",
+      "name": "Pasir Karamat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 778,
+      "continent": "oceania",
+      "lat": -7.2662,
+      "lon": 107.2141,
+      "facts": [
+        "Elevation 778 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Pasir Karamat rises 778 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "laralaramate-2725",
+      "name": "Laralaramaté",
+      "country": "Vanuatu",
+      "countryCode": "VU",
+      "range": "Melanesian Arc",
+      "elevationM": 757,
+      "continent": "oceania",
+      "lat": -15.11667,
+      "lon": 168.11667,
+      "facts": [
+        "Elevation 757 m above sea level.",
+        "Located in Vanuatu. (VU)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Laralaramaté rises 757 m in Vanuatu within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-kin-2736",
+      "name": "Mount Kin",
+      "country": "Timor-Leste",
+      "countryCode": "TL",
+      "range": "Indonesian Arc",
+      "elevationM": 746,
+      "continent": "oceania",
+      "lat": -9.33946,
+      "lon": 124.26861,
+      "facts": [
+        "Elevation 746 m above sea level.",
+        "Located in Timor-Leste. (TL)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Kin rises 746 m in Timor-Leste within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-separation-2752",
+      "name": "Mount Separation",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 725,
+      "continent": "oceania",
+      "lat": -36.79014,
+      "lon": 145.84459,
+      "facts": [
+        "Elevation 725 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Mount Separation rises 725 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "hanns-table-mountain-2753",
+      "name": "Hanns Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 724,
+      "continent": "oceania",
+      "lat": -19.28333,
+      "lon": 143.81667,
+      "facts": [
+        "Elevation 724 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Hanns Table Mountain rises 724 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "tubu-fetnai-2784",
+      "name": "Tubu Fetnai",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 670,
+      "continent": "oceania",
+      "lat": -9.8479,
+      "lon": 124.3199,
+      "facts": [
+        "Elevation 670 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Tubu Fetnai rises 670 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "te-manga-2789",
+      "name": "Te Manga",
+      "country": "Cook Islands",
+      "countryCode": "CK",
+      "range": null,
+      "elevationM": 653,
+      "continent": "oceania",
+      "lat": -21.23583,
+      "lon": -159.76361,
+      "facts": [
+        "Elevation 653 m above sea level.",
+        "Located in Cook Islands. (CK)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Te Manga rises 653 m in Cook Islands, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "rock-2791",
+      "name": "Rock",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "Southern Alps",
+      "elevationM": 652,
+      "continent": "oceania",
+      "lat": -41.9,
+      "lon": 172.45,
+      "facts": [
+        "Elevation 652 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Rock rises 652 m in New Zealand within the Southern Alps, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "pocupar-of-great-table-mountain-2795",
+      "name": "Pocupar of Great Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 638,
+      "continent": "oceania",
+      "lat": -28.6318,
+      "lon": 152.5012,
+      "facts": [
+        "Elevation 638 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Pocupar of Great Table Mountain rises 638 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "doro-marata-2799",
+      "name": "Doro Marata",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 631,
+      "continent": "oceania",
+      "lat": -8.3858,
+      "lon": 118.4106,
+      "facts": [
+        "Elevation 631 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Doro Marata rises 631 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-cotopaxi-2803",
+      "name": "Mount Cotopaxi",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 619,
+      "continent": "oceania",
+      "lat": -34.4652,
+      "lon": 150.6262,
+      "facts": [
+        "Elevation 619 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Mount Cotopaxi rises 619 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "olat-samparatol-2804",
+      "name": "Olat Samparatol",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 617,
+      "continent": "oceania",
+      "lat": -8.7067,
+      "lon": 117.311,
+      "facts": [
+        "Elevation 617 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Olat Samparatol rises 617 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-barat-2808",
+      "name": "Gunung Barat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 603,
+      "continent": "oceania",
+      "lat": -8.00667,
+      "lon": 111.00222,
+      "facts": [
+        "Elevation 603 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Barat rises 603 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "whakataratara-2809",
+      "name": "Whakataratara",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "New Zealand Alps / North Island Ranges",
+      "elevationM": 603,
+      "continent": "oceania",
+      "lat": -38.46667,
+      "lon": 177.06667,
+      "facts": [
+        "Elevation 603 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Whakataratara rises 603 m in New Zealand within the New Zealand Alps / North Island Ranges, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "lords-table-mountain-2812",
+      "name": "Lords Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 594,
+      "continent": "oceania",
+      "lat": -22.65,
+      "lon": 148.01666,
+      "facts": [
+        "Elevation 594 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Lords Table Mountain rises 594 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "nuuf-noetnana-2815",
+      "name": "Nuuf Noetnana",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 592,
+      "continent": "oceania",
+      "lat": -9.35278,
+      "lon": 124.77417,
+      "facts": [
+        "Elevation 592 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Nuuf Noetnana rises 592 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "makaluva-2819",
+      "name": "Makaluva",
+      "country": "Fiji",
+      "countryCode": "FJ",
+      "range": "Melanesian Arc",
+      "elevationM": 587,
+      "continent": "oceania",
+      "lat": -18.03365,
+      "lon": 178.28305,
+      "facts": [
+        "Elevation 587 m above sea level.",
+        "Located in Fiji. (FJ)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Makaluva rises 587 m in Fiji within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-cooke-2825",
+      "name": "Mount Cooke",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Western Australian Highlands",
+      "elevationM": 582,
+      "continent": "oceania",
+      "lat": -32.41406,
+      "lon": 116.3079,
+      "facts": [
+        "Elevation 582 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": 582,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Mount Cooke rises 582 m in Australia within the Western Australian Highlands, with 582 m of topographic prominence, shaped by other geological forces, with no permanent snow, subtropical climate."
+    },
+    {
+      "id": "table-mountain-2831",
+      "name": "Table Mountain",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 571,
+      "continent": "oceania",
+      "lat": -4.55703,
+      "lon": 141.13103,
+      "facts": [
+        "Elevation 571 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Table Mountain rises 571 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "parsons-hood-2835",
+      "name": "Parsons Hood",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 569,
+      "continent": "oceania",
+      "lat": -41.69538,
+      "lon": 145.33166,
+      "facts": [
+        "Elevation 569 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Parsons Hood rises 569 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "aratawa-2836",
+      "name": "Aratawa",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "New Zealand Alps / North Island Ranges",
+      "elevationM": 567,
+      "continent": "oceania",
+      "lat": -39.61667,
+      "lon": 175.25,
+      "facts": [
+        "Elevation 567 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Aratawa rises 567 m in New Zealand within the New Zealand Alps / North Island Ranges, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-waratah-2840",
+      "name": "Mount Waratah",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 563,
+      "continent": "oceania",
+      "lat": -34.3818,
+      "lon": 150.4012,
+      "facts": [
+        "Elevation 563 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Mount Waratah rises 563 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-everest-2845",
+      "name": "Mount Everest",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 556,
+      "continent": "oceania",
+      "lat": -30.0318,
+      "lon": 150.6346,
+      "facts": [
+        "Elevation 556 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Mount Everest rises 556 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mont-puke-2864",
+      "name": "Mont Puke",
+      "country": "Wallis and Futuna",
+      "countryCode": "WF",
+      "range": null,
+      "elevationM": 524,
+      "continent": "oceania",
+      "lat": -14.27065,
+      "lon": -178.13911,
+      "facts": [
+        "Elevation 524 m above sea level.",
+        "Located in Wallis and Futuna. (WF)"
+      ],
+      "prominenceM": 524,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mont Puke rises 524 m in Wallis and Futuna, with 524 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-ararat-2868",
+      "name": "Mount Ararat",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 522,
+      "continent": "oceania",
+      "lat": -37.32292,
+      "lon": 142.85681,
+      "facts": [
+        "Elevation 522 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Mount Ararat rises 522 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "palindi-baramata-2871",
+      "name": "Palindi Baramata",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 518,
+      "continent": "oceania",
+      "lat": -9.8983,
+      "lon": 119.9858,
+      "facts": [
+        "Elevation 518 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Palindi Baramata rises 518 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "tarata-2872",
+      "name": "Tarata",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "New Zealand Alps / North Island Ranges",
+      "elevationM": 517,
+      "continent": "oceania",
+      "lat": -39.7,
+      "lon": 176.0,
+      "facts": [
+        "Elevation 517 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Tarata rises 517 m in New Zealand within the New Zealand Alps / North Island Ranges, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "red-riding-hood-2874",
+      "name": "Red Riding Hood",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 516,
+      "continent": "oceania",
+      "lat": -22.48583,
+      "lon": 147.96389,
+      "facts": [
+        "Elevation 516 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Red Riding Hood rises 516 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "dome-2883",
+      "name": "Dome",
+      "country": "Papua New Guinea",
+      "countryCode": "PG",
+      "range": "New Guinea Highlands",
+      "elevationM": 510,
+      "continent": "oceania",
+      "lat": -7.06667,
+      "lon": 145.36667,
+      "facts": [
+        "Elevation 510 m above sea level.",
+        "Located in Papua New Guinea. (PG)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Dome rises 510 m in Papua New Guinea within the New Guinea Highlands, shaped by fold (orogenic) forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-cookem-2884",
+      "name": "Mount Cookem",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Great Dividing Range",
+      "elevationM": 510,
+      "continent": "oceania",
+      "lat": -33.8652,
+      "lon": 150.28461,
+      "facts": [
+        "Elevation 510 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Mount Cookem rises 510 m in Australia within the Great Dividing Range, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "golo-baratwoja-2885",
+      "name": "Golo Baratwoja",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 508,
+      "continent": "oceania",
+      "lat": -8.3848,
+      "lon": 120.2331,
+      "facts": [
+        "Elevation 508 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Golo Baratwoja rises 508 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-watulurung-2907",
+      "name": "Gunung Watulurung",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 472,
+      "continent": "oceania",
+      "lat": -7.12029,
+      "lon": 109.07473,
+      "facts": [
+        "Elevation 472 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Watulurung rises 472 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "paratoo-hill-2908",
+      "name": "Paratoo Hill",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 471,
+      "continent": "oceania",
+      "lat": -32.72641,
+      "lon": 139.37858,
+      "facts": [
+        "Elevation 471 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Paratoo Hill rises 471 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-saratuto-2915",
+      "name": "Gunung Saratuto",
+      "country": "Timor-Leste",
+      "countryCode": "TL",
+      "range": null,
+      "elevationM": 463,
+      "continent": "oceania",
+      "lat": -8.91361,
+      "lon": 125.92111,
+      "facts": [
+        "Elevation 463 m above sea level.",
+        "Located in Timor-Leste. (TL)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Saratuto rises 463 m in Timor-Leste, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "maratahia-2929",
+      "name": "Maratahia",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "New Zealand Alps / North Island Ranges",
+      "elevationM": 445,
+      "continent": "oceania",
+      "lat": -38.26667,
+      "lon": 176.58333,
+      "facts": [
+        "Elevation 445 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Maratahia rises 445 m in New Zealand within the New Zealand Alps / North Island Ranges, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mont-farataupoo-2943",
+      "name": "Mont Farataupoo",
+      "country": "French Polynesia",
+      "countryCode": "PF",
+      "range": "PK",
+      "elevationM": 421,
+      "continent": "oceania",
+      "lat": -17.5,
+      "lon": -149.8,
+      "facts": [
+        "Elevation 421 m above sea level.",
+        "Located in French Polynesia. (PF)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Mont Farataupoo rises 421 m in French Polynesia, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "table-2947",
+      "name": "Table",
+      "country": "New Zealand",
+      "countryCode": "NZ",
+      "range": "New Zealand Alps / North Island Ranges",
+      "elevationM": 418,
+      "continent": "oceania",
+      "lat": -40.65,
+      "lon": 176.1,
+      "facts": [
+        "Elevation 418 m above sea level.",
+        "Located in New Zealand. (NZ)"
+      ],
+      "prominenceM": null,
+      "formationType": "fold",
+      "naturalFeatures": "no permanent snow, temperate climate",
+      "summary": "Table rises 418 m in New Zealand within the New Zealand Alps / North Island Ranges, shaped by fold (orogenic) forces, with no permanent snow, temperate climate — its full record still unconfirmed."
+    },
+    {
+      "id": "narata-2953",
+      "name": "Narata",
+      "country": "Fiji",
+      "countryCode": "FJ",
+      "range": "Melanesian Arc",
+      "elevationM": 413,
+      "continent": "oceania",
+      "lat": -16.72356,
+      "lon": -179.89744,
+      "facts": [
+        "Elevation 413 m above sea level.",
+        "Located in Fiji. (FJ)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Narata rises 413 m in Fiji within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "osu-pondambeabarata-2955",
+      "name": "Osu Pondambeabarata",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 411,
+      "continent": "oceania",
+      "lat": -3.8023,
+      "lon": 122.3224,
+      "facts": [
+        "Elevation 411 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Osu Pondambeabarata rises 411 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-damparabarata-2956",
+      "name": "Gunung Damparabarata",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 408,
+      "continent": "oceania",
+      "lat": -5.1761,
+      "lon": 122.0313,
+      "facts": [
+        "Elevation 408 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Damparabarata rises 408 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-lamlam-2959",
+      "name": "Mount Lamlam",
+      "country": "Guam",
+      "countryCode": "GU",
+      "range": null,
+      "elevationM": 406,
+      "continent": "oceania",
+      "lat": 13.33986,
+      "lon": 144.6657,
+      "facts": [
+        "Elevation 406 m above sea level.",
+        "Located in Guam. (GU)"
+      ],
+      "prominenceM": 1332,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Lamlam rises 406 m in Guam, with 1,332 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-jumullong-manglo-2966",
+      "name": "Mount Jumullong Manglo",
+      "country": "Guam",
+      "countryCode": "GU",
+      "range": null,
+      "elevationM": 391,
+      "continent": "oceania",
+      "lat": 13.32972,
+      "lon": 144.67228,
+      "facts": [
+        "Elevation 391 m above sea level.",
+        "Located in Guam. (GU)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Jumullong Manglo rises 391 m in Guam, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-hocarata-2971",
+      "name": "Gunung Hocarata",
+      "country": "Timor-Leste",
+      "countryCode": "TL",
+      "range": null,
+      "elevationM": 381,
+      "continent": "oceania",
+      "lat": -8.75,
+      "lon": 126.59028,
+      "facts": [
+        "Elevation 381 m above sea level.",
+        "Located in Timor-Leste. (TL)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Hocarata rises 381 m in Timor-Leste, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "murray-hill-2981",
+      "name": "Murray Hill",
+      "country": "CX",
+      "countryCode": "CX",
+      "range": "HLL",
+      "elevationM": 361,
+      "continent": "oceania",
+      "lat": -10.48237,
+      "lon": 105.58179,
+      "facts": [
+        "Elevation 361 m above sea level.",
+        "Located in CX. (CX)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": 357,
+      "summary": "Murray Hill rises 361 m in CX, with 357 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mont-parata-2986",
+      "name": "Mont Parata",
+      "country": "French Polynesia",
+      "countryCode": "PF",
+      "range": null,
+      "elevationM": 350,
+      "continent": "oceania",
+      "lat": -17.5,
+      "lon": -149.88333,
+      "facts": [
+        "Elevation 350 m above sea level.",
+        "Located in French Polynesia. (PF)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mont Parata rises 350 m in French Polynesia, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "pawala-valley-ridge-2988",
+      "name": "Pawala Valley Ridge",
+      "country": "Pitcairn",
+      "countryCode": "PN",
+      "range": "HLL",
+      "elevationM": 347,
+      "continent": "oceania",
+      "lat": -25.06837,
+      "lon": -130.11312,
+      "facts": [
+        "Elevation 347 m above sea level.",
+        "Located in Pitcairn. (PN)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "prominenceM": 347,
+      "summary": "Pawala Valley Ridge rises 347 m in Pitcairn, with 347 m of topographic prominence, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "aramati-2991",
+      "name": "Aramati",
+      "country": "French Polynesia",
+      "countryCode": "PF",
+      "range": null,
+      "elevationM": 344,
+      "continent": "oceania",
+      "lat": -16.82068,
+      "lon": -151.42781,
+      "facts": [
+        "Elevation 344 m above sea level.",
+        "Located in French Polynesia. (PF)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Aramati rises 344 m in French Polynesia, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "bukit-sarang-jarat-2999",
+      "name": "Bukit Sarang Jarat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 333,
+      "continent": "oceania",
+      "lat": 0.5146,
+      "lon": 100.5816,
+      "facts": [
+        "Elevation 333 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Bukit Sarang Jarat rises 333 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-cookabar-3006",
+      "name": "Mount Cookabar",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 326,
+      "continent": "oceania",
+      "lat": -14.91667,
+      "lon": 145.05,
+      "facts": [
+        "Elevation 326 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Cookabar rises 326 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-bates-3009",
+      "name": "Mount Bates",
+      "country": "NF",
+      "countryCode": "NF",
+      "range": null,
+      "elevationM": 319,
+      "continent": "oceania",
+      "lat": -29.01124,
+      "lon": 167.9401,
+      "facts": [
+        "Elevation 319 m above sea level.",
+        "Located in NF. (NF)"
+      ],
+      "prominenceM": 319,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, subtropical climate",
+      "summary": "Mount Bates rises 319 m in NF, with 319 m of topographic prominence, with no permanent snow, subtropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ili-darat-3017",
+      "name": "Ili Darat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 305,
+      "continent": "oceania",
+      "lat": -8.5,
+      "lon": 122.51667,
+      "facts": [
+        "Elevation 305 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Ili Darat rises 305 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ora-3018",
+      "name": "Ora",
+      "country": "New Caledonia",
+      "countryCode": "NC",
+      "range": "PK",
+      "elevationM": 305,
+      "continent": "oceania",
+      "lat": -20.5,
+      "lon": 164.23333,
+      "facts": [
+        "Elevation 305 m above sea level.",
+        "Located in New Caledonia. (NC)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Ora rises 305 m in New Caledonia, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "doro-karatu-3019",
+      "name": "Doro Karatu",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Sunda Arc",
+      "elevationM": 304,
+      "continent": "oceania",
+      "lat": -8.4984,
+      "lon": 118.8156,
+      "facts": [
+        "Elevation 304 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Doro Karatu rises 304 m in Indonesia within the Sunda Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "kerrs-table-mountain-3020",
+      "name": "Kerrs Table Mountain",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 304,
+      "continent": "oceania",
+      "lat": -21.7325,
+      "lon": 141.96667,
+      "facts": [
+        "Elevation 304 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Kerrs Table Mountain rises 304 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mitialgarat-3031",
+      "name": "Mitialgarat",
+      "country": "Vanuatu",
+      "countryCode": "VU",
+      "range": "PK",
+      "elevationM": 272,
+      "continent": "oceania",
+      "lat": -13.53333,
+      "lon": 167.3,
+      "facts": [
+        "Elevation 272 m above sea level.",
+        "Located in Vanuatu. (VU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Mitialgarat rises 272 m in Vanuatu, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "oro-3043",
+      "name": "Oro",
+      "country": "New Caledonia",
+      "countryCode": "NC",
+      "range": "Melanesian Arc",
+      "elevationM": 256,
+      "continent": "oceania",
+      "lat": -21.31667,
+      "lon": 165.55,
+      "facts": [
+        "Elevation 256 m above sea level.",
+        "Located in New Caledonia. (NC)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Oro rises 256 m in New Caledonia within the Melanesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-marathon-3049",
+      "name": "Mount Marathon",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 243,
+      "continent": "oceania",
+      "lat": -20.55833,
+      "lon": 140.505,
+      "facts": [
+        "Elevation 243 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Marathon rises 243 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "ngerchelchuus-3050",
+      "name": "Ngerchelchuus",
+      "country": "PW",
+      "countryCode": "PW",
+      "range": "HLL",
+      "elevationM": 242,
+      "continent": "oceania",
+      "lat": 7.56241,
+      "lon": 134.57072,
+      "facts": [
+        "Elevation 242 m above sea level.",
+        "Located in PW. (PW)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": 242,
+      "summary": "Ngerchelchuus rises 242 m in PW, with 242 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "malaratai-3055",
+      "name": "Malaratai",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 236,
+      "continent": "oceania",
+      "lat": -3.10243,
+      "lon": 128.2657,
+      "facts": [
+        "Elevation 236 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Malaratai rises 236 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "bukit-taratak-3067",
+      "name": "Bukit Taratak",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 198,
+      "continent": "oceania",
+      "lat": -0.98325,
+      "lon": 100.42777,
+      "facts": [
+        "Elevation 198 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Bukit Taratak rises 198 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "nga-3101",
+      "name": "Nga",
+      "country": "New Caledonia",
+      "countryCode": "NC",
+      "range": "PK",
+      "elevationM": 122,
+      "continent": "oceania",
+      "lat": -21.65,
+      "lon": 166.33333,
+      "facts": [
+        "Elevation 122 m above sea level.",
+        "Located in New Caledonia. (NC)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Nga rises 122 m in New Caledonia, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "hunga-tonga-hunga-ha-apai-3103",
+      "name": "Hunga Tonga-Hunga Ha'apai",
+      "country": "Tonga",
+      "countryCode": "TO",
+      "range": "VLC",
+      "elevationM": 114,
+      "continent": "oceania",
+      "lat": -20.54498,
+      "lon": -175.39173,
+      "facts": [
+        "Elevation 114 m above sea level.",
+        "Located in Tonga. (TO)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Hunga Tonga-Hunga Ha'apai rises 114 m in Tonga, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "top-of-kiribati-3115",
+      "name": "Top of Kiribati",
+      "country": "Kiribati",
+      "countryCode": "KI",
+      "range": null,
+      "elevationM": 81,
+      "continent": "oceania",
+      "lat": -0.855,
+      "lon": 169.5385,
+      "facts": [
+        "Elevation 81 m above sea level.",
+        "Located in Kiribati. (KI)"
+      ],
+      "prominenceM": null,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Top of Kiribati rises 81 m in Kiribati, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "gunung-kamuning-darat-3116",
+      "name": "Gunung Kamuning Darat",
+      "country": "Indonesia",
+      "countryCode": "ID",
+      "range": "Indonesian Arc",
+      "elevationM": 80,
+      "continent": "oceania",
+      "lat": -0.79145,
+      "lon": 109.53835,
+      "facts": [
+        "Elevation 80 m above sea level.",
+        "Located in Indonesia. (ID)"
+      ],
+      "prominenceM": null,
+      "formationType": "volcanic",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Gunung Kamuning Darat rises 80 m in Indonesia within the Indonesian Arc, shaped by volcanic activity, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "command-ridge-top-of-nauru-3122",
+      "name": "Command Ridge Top of Nauru",
+      "country": "Nauru",
+      "countryCode": "NR",
+      "range": null,
+      "elevationM": 71,
+      "continent": "oceania",
+      "lat": -0.53062,
+      "lon": 166.91679,
+      "facts": [
+        "Elevation 71 m above sea level.",
+        "Located in Nauru. (NR)"
+      ],
+      "prominenceM": 65,
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Command Ridge Top of Nauru rises 71 m in Nauru, with 65 m of topographic prominence, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "mount-etna-3123",
+      "name": "Mount Etna",
+      "country": "Australia",
+      "countryCode": "AU",
+      "range": "Australian Highlands",
+      "elevationM": 70,
+      "continent": "oceania",
+      "lat": -23.16667,
+      "lon": 150.45,
+      "facts": [
+        "Elevation 70 m above sea level.",
+        "Located in Australia. (AU)"
+      ],
+      "prominenceM": null,
+      "formationType": "other",
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "summary": "Mount Etna rises 70 m in Australia within the Australian Highlands, shaped by other geological forces, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "near-mutalau-3126",
+      "name": "Near Mutalau",
+      "country": "Niue",
+      "countryCode": "NU",
+      "range": "HLL",
+      "elevationM": 68,
+      "continent": "oceania",
+      "lat": -18.968,
+      "lon": -169.867,
+      "facts": [
+        "Elevation 68 m above sea level.",
+        "Located in Niue. (NU)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Near Mutalau rises 68 m in Niue, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "likiep-high-point-3135",
+      "name": "Likiep High Point",
+      "country": "Marshall Islands",
+      "countryCode": "MH",
+      "range": "HLL",
+      "elevationM": 10,
+      "continent": "oceania",
+      "lat": 9.825,
+      "lon": 169.308,
+      "facts": [
+        "Elevation 10 m above sea level.",
+        "Located in Marshall Islands. (MH)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Likiep High Point rises 10 m in Marshall Islands, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "baker-island-high-point-3138",
+      "name": "Baker Island High Point",
+      "country": "US Minor Outlying Islands",
+      "countryCode": "UM",
+      "range": "HLL",
+      "elevationM": 8,
+      "continent": "oceania",
+      "lat": 0.195,
+      "lon": -176.479,
+      "facts": [
+        "Elevation 8 m above sea level.",
+        "Located in US Minor Outlying Islands. (UM)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Baker Island High Point rises 8 m in US Minor Outlying Islands, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "atafu-high-point-3139",
+      "name": "Atafu High Point",
+      "country": "Tokelau",
+      "countryCode": "TK",
+      "range": "HLL",
+      "elevationM": 5,
+      "continent": "oceania",
+      "lat": -8.542,
+      "lon": -172.516,
+      "facts": [
+        "Elevation 5 m above sea level.",
+        "Located in Tokelau. (TK)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Atafu High Point rises 5 m in Tokelau, with no permanent snow, tropical climate — its full record still unconfirmed."
+    },
+    {
+      "id": "niulakita-high-point-3141",
+      "name": "Niulakita High Point",
+      "country": "Tuvalu",
+      "countryCode": "TV",
+      "range": "HLL",
+      "elevationM": 5,
+      "continent": "oceania",
+      "lat": -10.788,
+      "lon": 179.466,
+      "facts": [
+        "Elevation 5 m above sea level.",
+        "Located in Tuvalu. (TV)"
+      ],
+      "formationType": null,
+      "naturalFeatures": "no permanent snow, tropical climate",
+      "prominenceM": null,
+      "summary": "Niulakita High Point rises 5 m in Tuvalu, with no permanent snow, tropical climate — its full record still unconfirmed."
+    }
+  ]
+}

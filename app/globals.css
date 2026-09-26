@@ -1,0 +1,220 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* CODE ARCHE cosmic field-guide */
+  --pk-bg: #0a0414;
+  --pk-panel: rgba(26, 11, 46, 0.82);
+  --pk-panel-solid: #1a0b2e;
+  --pk-panel-2: rgba(20, 8, 36, 0.92);
+  --pk-line: rgba(45, 212, 191, 0.22);
+  --pk-line-soft: rgba(124, 58, 237, 0.18);
+
+  --pk-ink: #eef3f7;
+  --pk-muted: #9db0c0;
+  --pk-faint: #6f8294;
+
+  --pk-forest: #2dd4bf;
+  --pk-forest-deep: #5eead4;
+  --pk-forest-soft: rgba(45, 212, 191, 0.14);
+
+  --pk-moss: #a78bfa;
+  --pk-moss-soft: rgba(124, 58, 237, 0.16);
+
+  --pk-amber: #e8c36a;
+  --pk-amber-soft: rgba(232, 195, 106, 0.16);
+
+  --pk-sky: #7dd3fc;
+  --pk-sky-soft: rgba(125, 211, 252, 0.12);
+
+  --pk-on-hero: #071018;
+  --pk-on-hero-soft: rgba(7, 16, 24, 0.72);
+
+  --pk-band-1: #5eead4;
+  --pk-band-2: #2dd4bf;
+  --pk-band-3: #38bdf8;
+  --pk-band-4: #a78bfa;
+  --pk-band-5: #f0abfc;
+
+  --background: var(--pk-bg);
+  --foreground: var(--pk-ink);
+  --card: var(--pk-panel);
+  --card-foreground: var(--pk-ink);
+  --popover: #140824;
+  --popover-foreground: var(--pk-ink);
+  --primary: var(--pk-forest);
+  --primary-foreground: var(--pk-on-hero);
+  --secondary: var(--pk-panel-2);
+  --secondary-foreground: var(--pk-ink);
+  --muted: var(--pk-panel-2);
+  --muted-foreground: var(--pk-muted);
+  --accent: var(--pk-forest-soft);
+  --accent-foreground: var(--pk-forest-deep);
+  --destructive: #f07178;
+  --destructive-foreground: #1a0508;
+  --border: var(--pk-line);
+  --input: var(--pk-line);
+  --ring: var(--pk-forest);
+  --radius: 1.05rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-pk-sans);
+  --font-serif: var(--font-pk-display);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/40;
+  }
+  html,
+  body {
+    background: var(--pk-bg);
+    color: var(--pk-ink);
+  }
+  body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-pk-display), Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .pk-nums {
+    font-family: var(--font-geist-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .pk-app-bg {
+    min-height: 100dvh;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(45, 212, 191, 0.12), transparent 55%),
+      radial-gradient(ellipse 70% 45% at 90% 10%, rgba(124, 58, 237, 0.14), transparent 50%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(45, 212, 191, 0.06), transparent 55%),
+      linear-gradient(165deg, #070312 0%, #1a0b2e 48%, #0a0414 100%);
+  }
+  .pk-hero-grad {
+    background: linear-gradient(135deg, #2dd4bf 0%, #7c3aed 100%);
+  }
+  .pk-card {
+    border: 1px solid var(--pk-line);
+    background: var(--pk-panel);
+    border-radius: 1.15rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+  }
+  .pk-press {
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+  .pk-press:active {
+    transform: scale(0.985);
+  }
+  .pk-fade-in {
+    animation: pkFade 0.45s ease both;
+  }
+  .pk-safe-top {
+    padding-top: max(12px, env(safe-area-inset-top));
+  }
+  .pk-safe-bottom {
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+  .pk-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  .pk-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* Quiet scrollbars — laptop / desktop; barely there */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklch, var(--pk-forest) 35%, transparent) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: color-mix(in oklch, var(--pk-forest) 32%, transparent);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklch, var(--pk-forest) 48%, transparent);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@keyframes pkFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ca-connect-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.ca-connect-bar {
+  animation: ca-connect-slide 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ca-connect-bar {
+    animation: none !important;
+  }
+}
