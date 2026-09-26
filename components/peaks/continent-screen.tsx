@@ -21,7 +21,7 @@ export function ContinentScreen({ continentId }: { continentId: ContinentId }) {
   }, [continentId]);
 
   return (
-    <div className="mx-auto max-w-md px-5 pb-8 pt-3">
+    <div className="px-5 pb-8 pt-3">
       <button
         type="button"
         onClick={() => setNav({ screen: "home" })}

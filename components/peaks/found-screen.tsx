@@ -30,7 +30,7 @@ export function FoundScreen({ onOpen }: { onOpen: (id: string) => void }) {
   };
 
   return (
-    <div className="mx-auto max-w-md px-5 pt-3">
+    <div className="px-5 pt-3">
       <button
         type="button"
         onClick={() => setNav({ screen: "home" })}

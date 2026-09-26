@@ -16,7 +16,7 @@ export function BottomNav() {
   const { tab, setTab, favCount } = usePeaks();
   return (
     <nav className="pk-safe-bottom fixed inset-x-0 bottom-0 z-[80] border-t border-[var(--pk-line)] bg-[color-mix(in_oklch,var(--pk-panel)_92%,transparent)] backdrop-blur">
-      <div className="mx-auto flex max-w-md items-stretch justify-around px-2 pt-1.5">
+      <div className="mx-auto flex w-full max-w-md items-stretch justify-around px-2 pt-1.5 md:max-w-2xl">
         {TABS.map(({ id, label, icon: Icon }) => {
           const active = tab === id;
           return (

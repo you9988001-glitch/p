@@ -91,7 +91,7 @@ function Shell() {
 
   return (
     <div className="pk-app-bg relative min-h-[100dvh]">
-      <main className="pk-fade-in pk-safe-top pb-28">
+      <main className="pk-fade-in pk-safe-top mx-auto w-full max-w-md pb-28 md:max-w-2xl">
         {tab === "home" && nav.screen === "home" && <HomeScreen />}
         {tab === "home" && nav.screen === "found" && (
           <FoundScreen onOpen={setOpenId} />

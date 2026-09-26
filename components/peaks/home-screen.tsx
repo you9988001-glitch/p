@@ -28,7 +28,7 @@ export function HomeScreen() {
   const [narrativeOpen, setNarrativeOpen] = useState(false);
 
   return (
-    <div className="mx-auto max-w-md px-5 pb-8 pt-4">
+    <div className="px-5 pb-8 pt-4">
       <header className="mb-6">
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-[var(--pk-forest)]">
           CODE ARCHE · Peaks

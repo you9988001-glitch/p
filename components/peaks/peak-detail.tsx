@@ -302,7 +302,7 @@ function PeakPaywall({
   const appName = "Peaks 3141";
 
   return (
-    <div className="mx-auto w-full max-w-md px-5 pb-10 pt-2 md:max-w-lg">
+    <div className="mx-auto w-full max-w-md px-5 pb-10 pt-2 md:max-w-2xl">
       <div className="rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
         <div className="rounded-2xl border border-[var(--pk-amber)]/40 bg-[var(--pk-amber-soft)]/45 px-4 py-3">
           <p className="text-[0.88rem] leading-relaxed text-[var(--pk-ink)]">
@@ -574,7 +574,7 @@ export function PeakDetail({
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto">
-        <div className="mx-auto max-w-md px-5 pb-6 pt-2">
+        <div className="mx-auto w-full max-w-md px-5 pb-6 pt-2 md:max-w-2xl">
           <div className="flex items-center gap-3">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[var(--pk-line)] bg-black/30 text-xl">
               {flagSrc ? (
@@ -763,7 +763,7 @@ export function PeakDetail({
       </div>
 
       <div className="pk-safe-bottom shrink-0 border-t border-[var(--pk-line)] bg-[rgba(20,8,36,0.92)] px-5 pt-3 backdrop-blur">
-        <div className="mx-auto flex max-w-md gap-2">
+        <div className="mx-auto flex w-full max-w-md gap-2 md:max-w-2xl">
           <Button
             onClick={handleFound}
             variant={found ? "outline" : "primary"}
