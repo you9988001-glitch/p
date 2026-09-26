@@ -15,14 +15,6 @@ const nextConfig = {
     unoptimized: true,
   },
   outputFileTracingRoot: path.join(__dirname),
-  async rewrites() {
-    return [
-      {
-        source: "/validation-key.txt",
-        destination: "/api/pi-validation-key",
-      },
-    ];
-  },
 };
 
 export default nextConfig;
