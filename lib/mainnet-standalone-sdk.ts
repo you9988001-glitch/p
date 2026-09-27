@@ -1,5 +1,6 @@
 "use client";
 
+import { fetchAccountOwnershipPurchases } from "@/lib/fetch-account-ownership";
 import { createMainnetUnlockPayment } from "@/lib/mainnet-create-payment";
 import { readLocalDeed } from "@/lib/peaks/ownership-deed";
 import { fallbackUnlockProducts } from "@/lib/unlock-catalog-fallback";
@@ -11,6 +12,19 @@ import type {
 } from "@/lib/sdklite-types";
 
 const LS_PREFIX = "peaks3141:pi-state:";
+
+async function resolvePurchases() {
+  const deed = readLocalDeed();
+  const hint = deed?.paymentId ?? null;
+  const account = await fetchAccountOwnershipPurchases(hint);
+  if (account?.length) {
+    return { purchases: account };
+  }
+  if (deed?.paymentId && deed.txid && deed.source === "purchase") {
+    return { purchases: [{ productId: deed.productId, quantity: 1 }] };
+  }
+  return { purchases: [] };
+}
 
 function readLocalState(key: string): UserStateRecord | null {
   try {
@@ -45,24 +59,8 @@ export function createMainnetStandaloneSdk(): SDKLiteInstance {
         writeLocalState(key, blob);
       },
       products: async () => ({ products: fallbackUnlockProducts() }),
-      purchases: async () => {
-        const deed = readLocalDeed();
-        if (deed?.paymentId && deed.txid && deed.source === "purchase") {
-          return {
-            purchases: [{ productId: deed.productId, quantity: 1 }],
-          };
-        }
-        return { purchases: [] };
-      },
-      restore: async (_options?: RestoreOptions) => {
-        const deed = readLocalDeed();
-        if (deed?.paymentId && deed.txid && deed.source === "purchase") {
-          return {
-            purchases: [{ productId: deed.productId, quantity: 1 }],
-          };
-        }
-        return { purchases: [] };
-      },
+      purchases: async () => resolvePurchases(),
+      restore: async (_options?: RestoreOptions) => resolvePurchases(),
       consume: async (productId, quantity = 1): Promise<ConsumeResponse> => ({
         productId,
         quantity,

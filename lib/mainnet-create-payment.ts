@@ -1,6 +1,7 @@
 "use client";
 
 import { MAINNET_UNLOCK_PI } from "@/lib/payment-env";
+import { getPiAccessToken } from "@/lib/pi-access-token";
 import type { PurchaseResult, SDKLiteError } from "@/lib/sdklite-types";
 
 function purchaseError(
@@ -49,7 +50,11 @@ export function createMainnetUnlockPayment(
           const r = await fetch("/api/payments/complete", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ paymentId, txid }),
+            body: JSON.stringify({
+              paymentId,
+              txid,
+              accessToken: getPiAccessToken() || undefined,
+            }),
           });
           const j = await r.json().catch(() => ({}));
           if (!r.ok) {

@@ -1,4 +1,10 @@
 import { NextResponse } from "next/server";
+import { verifyPiAccessToken } from "@/lib/server/pi-me";
+import { getPiPayment, isValidUnlockPayment } from "@/lib/server/pi-get-payment";
+import {
+  defaultProductId,
+  saveUnlockRecord,
+} from "@/lib/server/ownership-registry";
 import { piCompletePayment } from "@/lib/server/pi-platform-payments";
 
 export async function POST(req: Request) {
@@ -7,6 +13,8 @@ export async function POST(req: Request) {
     const paymentId =
       typeof body?.paymentId === "string" ? body.paymentId.trim() : "";
     const txid = typeof body?.txid === "string" ? body.txid.trim() : "";
+    const accessToken =
+      typeof body?.accessToken === "string" ? body.accessToken.trim() : "";
     if (!paymentId || !txid) {
       return NextResponse.json(
         { ok: false, error: "Missing paymentId or txid" },
@@ -24,9 +32,33 @@ export async function POST(req: Request) {
         { status: result.status },
       );
     }
+
+    let ownershipSaved = false;
+    if (accessToken) {
+      const user = await verifyPiAccessToken(accessToken);
+      const { ok, payment } = await getPiPayment(paymentId);
+      const productId = defaultProductId();
+      if (
+        user &&
+        ok &&
+        payment &&
+        isValidUnlockPayment(payment, user.uid, productId)
+      ) {
+        ownershipSaved = await saveUnlockRecord({
+          uid: user.uid,
+          username: user.username,
+          productId,
+          paymentId,
+          txid,
+          completedAt: new Date().toISOString(),
+        });
+      }
+    }
+
     return NextResponse.json({
       ok: true,
       alreadyCompleted: result.alreadyCompleted,
+      ownershipSaved,
       pi: result.pi,
     });
   } catch (e) {

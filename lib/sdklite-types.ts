@@ -77,7 +77,10 @@ declare global {
       authenticate: (
         scopes: string[],
         onIncompletePaymentFound?: (payment: unknown) => void,
-      ) => Promise<{ accessToken?: string; user?: { username?: string } }>;
+      ) => Promise<{
+        accessToken?: string;
+        user?: { username?: string; uid?: string };
+      }>;
       createPayment: (
         paymentData: {
           amount: number;

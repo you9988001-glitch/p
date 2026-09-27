@@ -10,6 +10,7 @@ import React, {
 } from "react";
 import { PI_NETWORK_CONFIG } from "@/lib/system-config";
 import { createMainnetStandaloneSdk } from "@/lib/mainnet-standalone-sdk";
+import { setPiAccessToken } from "@/lib/pi-access-token";
 import type {
   Product,
   SDKLiteInstance,
@@ -271,9 +272,12 @@ export function PiAuthProvider({ children }: { children: ReactNode }) {
 
       // Pass Pi / mainnet on Vercel — no App Studio SDKLite or piappengine backend.
       setAuthMessage("Signing in with Pi (payments)…");
-      await window.Pi.authenticate(["payments"], (payment) => {
+      const auth = await window.Pi.authenticate(["payments"], (payment) => {
         console.warn("[PiAuth] Incomplete payment — resolve in Pi Wallet", payment);
       });
+      setPiAccessToken(
+        typeof auth?.accessToken === "string" ? auth.accessToken : null,
+      );
 
       const sdkInstance = createMainnetStandaloneSdk();
       setSdk(sdkInstance);
