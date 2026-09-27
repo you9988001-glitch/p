@@ -1,6 +1,7 @@
 "use client";
 
 import { createMainnetUnlockPayment } from "@/lib/mainnet-create-payment";
+import { readLocalDeed } from "@/lib/peaks/ownership-deed";
 import { fallbackUnlockProducts } from "@/lib/unlock-catalog-fallback";
 import type {
   ConsumeResponse,
@@ -44,8 +45,24 @@ export function createMainnetStandaloneSdk(): SDKLiteInstance {
         writeLocalState(key, blob);
       },
       products: async () => ({ products: fallbackUnlockProducts() }),
-      purchases: async () => ({ purchases: [] }),
-      restore: async (_options?: RestoreOptions) => ({ purchases: [] }),
+      purchases: async () => {
+        const deed = readLocalDeed();
+        if (deed?.paymentId && deed.txid && deed.source === "purchase") {
+          return {
+            purchases: [{ productId: deed.productId, quantity: 1 }],
+          };
+        }
+        return { purchases: [] };
+      },
+      restore: async (_options?: RestoreOptions) => {
+        const deed = readLocalDeed();
+        if (deed?.paymentId && deed.txid && deed.source === "purchase") {
+          return {
+            purchases: [{ productId: deed.productId, quantity: 1 }],
+          };
+        }
+        return { purchases: [] };
+      },
       consume: async (productId, quantity = 1): Promise<ConsumeResponse> => ({
         productId,
         quantity,

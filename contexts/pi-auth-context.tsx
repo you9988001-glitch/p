@@ -279,7 +279,12 @@ export function PiAuthProvider({ children }: { children: ReactNode }) {
       setSdk(sdkInstance);
       setIsAuthenticated(true);
       await fetchProducts(sdkInstance);
-      setRestoredPurchases([]);
+      try {
+        const { purchases } = await sdkInstance.state.restore();
+        setRestoredPurchases(Array.isArray(purchases) ? purchases : []);
+      } catch {
+        setRestoredPurchases([]);
+      }
     } catch (err) {
       console.error("SDKLite initialization failed:", err);
       setHasError(true);
