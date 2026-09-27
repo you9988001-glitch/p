@@ -86,12 +86,29 @@ export function isSealedPurchaseDeed(
   );
 }
 
+function deedMatchesUnlockProduct(
+  deed: { productId?: string; productSlug?: string } | null | undefined,
+): boolean {
+  if (!deed?.productSlug?.trim()) return false;
+  const ids = new Set(collectUnlockIds(null, [deed.productId, deed.productSlug]));
+  if (deed.productId && ids.has(deed.productId)) return true;
+  if (ids.has(deed.productSlug)) return true;
+  return UNLOCK_PRODUCT_IDS.some(
+    (id) => id === deed.productId || id === deed.productSlug,
+  );
+}
+
 export function hasUnlockAccess(
   purchases: UserPurchaseBalance[] | null | undefined,
   product: { id?: string; slug?: string } | null | undefined,
   localDeed: Parameters<typeof isSealedPurchaseDeed>[0],
   extraIds: Array<string | null | undefined> = [],
 ): boolean {
-  if (isSealedPurchaseDeed(localDeed)) return true;
+  if (localDeed) {
+    if (isSealedPurchaseDeed(localDeed)) return true;
+    if (localDeed.source === "restore_seal" && deedMatchesUnlockProduct(localDeed)) {
+      return true;
+    }
+  }
   return isRestoreOwned(purchases, product, extraIds);
 }

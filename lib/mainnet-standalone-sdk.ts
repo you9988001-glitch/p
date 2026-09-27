@@ -23,6 +23,13 @@ async function resolvePurchases() {
   if (deed?.paymentId && deed.txid && deed.source === "purchase") {
     return { purchases: [{ productId: deed.productId, quantity: 1 }] };
   }
+  if (deed?.source === "restore_seal" && deed.productSlug) {
+    return {
+      purchases: [
+        { productId: deed.productId || deed.productSlug, quantity: 1 },
+      ],
+    };
+  }
   return { purchases: [] };
 }
 

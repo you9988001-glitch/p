@@ -1,23 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { usePeaks } from "@/contexts/peaks-context";
 import { usePiAuth } from "@/contexts/pi-auth-context";
 import type { LivePeakTime } from "@/lib/peaks/live-time";
 import { LiveTimeCard } from "@/components/peaks/live-time-card";
 import { AntipodeResultSheet } from "@/components/peaks/antipode-result-sheet";
 import type { AntipodeTapResult } from "@/lib/peaks/antipode-tap";
-import { PEAK_DETAIL_PRODUCT_ID } from "@/lib/product-config";
-import {
-  MAINNET_UNLOCK_PI,
-  PAYMENT_ENV,
-  catalogPriceMatchesUnlock,
-} from "@/lib/payment-env";
+import { PAYMENT_ENV } from "@/lib/payment-env";
 import {
   paywallAuthHint,
   paywallShowRetry,
 } from "@/lib/paywall-auth-hint";
-import { resolveUnlockProduct } from "@/lib/resolve-unlock-product";
 import {
   bandOf,
   continentName,
@@ -38,22 +32,6 @@ import {
   IconStarFilled,
   Pill,
 } from "@/components/peaks/ui";
-import { sealPurchaseDeed } from "@/components/peaks/ownership-deed-card";
-import {
-  buildRestoreSealDeed,
-  readLocalDeed,
-  writeLocalDeed,
-  type OwnershipDeed,
-} from "@/lib/peaks/ownership-deed";
-import {
-  hasUnlockAccess,
-  isRestoreOwned,
-  OWNERSHIP_DEED_SEALED_EVENT,
-  purchaseQtyForUnlock,
-  TEST_PI_PRICE,
-  UNLOCK_FALLBACK,
-} from "@/lib/peaks/unlock-gate";
-
 function FactRow({ text }: { text: string }) {
   return (
     <li className="flex gap-3">
@@ -129,32 +107,25 @@ function displayNaturalFeatures(nf: string | null | undefined): string {
   return String(nf).trim();
 }
 
-function PeakPaywall({
-  onUnlocked,
-  onPurchaseSealed,
-}: {
-  onUnlocked: () => void;
-  onPurchaseSealed: () => void;
-}) {
+function PeakPaywall() {
+  const {
+    productPrice,
+    productCatalogIssue,
+    purchaseUnlock,
+    purchasesReady,
+    isUnlocked,
+    refreshUnlockStatus,
+  } = usePeaks();
   const {
     sdk,
     products,
-    restoredPurchases,
-    refreshPurchases,
     isAuthenticated,
     hasError,
     authMessage,
     reinitialize,
   } = usePiAuth();
-  const { toast } = usePeaks();
   const [busy, setBusy] = useState(false);
-  const [localDeed, setLocalDeed] = useState<OwnershipDeed | null>(null);
   const [checkTimedOut, setCheckTimedOut] = useState(false);
-
-  const product = useMemo(
-    () => resolveUnlockProduct(products, PEAK_DETAIL_PRODUCT_ID),
-    [products],
-  );
   const productsLoaded = products !== null;
   const authHint = paywallAuthHint({
     isAuthenticated,
@@ -168,169 +139,33 @@ function PeakPaywall({
     productsLoaded,
   });
 
-  const catalogPriceOk =
-    product != null && catalogPriceMatchesUnlock(product.price_in_pi);
-  /** Show 3.141 π only when Portal catalog matches (checkout uses catalog price). */
-  const productPrice = catalogPriceOk ? MAINNET_UNLOCK_PI : null;
+  useEffect(() => {
+    void refreshUnlockStatus();
+  }, [refreshUnlockStatus]);
 
   useEffect(() => {
-    setLocalDeed(readLocalDeed());
-  }, []);
-
-  useEffect(() => {
-    void refreshPurchases();
-  }, [refreshPurchases]);
-
-  useEffect(() => {
-    if (restoredPurchases !== null) {
+    if (purchasesReady) {
       setCheckTimedOut(false);
       return;
     }
     const t = window.setTimeout(() => setCheckTimedOut(true), 4000);
     return () => window.clearTimeout(t);
-  }, [restoredPurchases]);
-
-  const purchasesReady =
-    restoredPurchases !== null || checkTimedOut || hasError;
-
-  const restoreOwned = useMemo(
-    () =>
-      hasUnlockAccess(restoredPurchases, product, localDeed, [
-        localDeed?.productId,
-        localDeed?.productSlug,
-      ]),
-    [localDeed, product, restoredPurchases],
-  );
-
-  const owned = restoreOwned;
-
-  useEffect(() => {
-    if (owned) onUnlocked();
-  }, [owned, onUnlocked]);
-
-  useEffect(() => {
-    if (!restoreOwned || localDeed) return;
-    const next = buildRestoreSealDeed({
-      productId: product?.id ?? UNLOCK_FALLBACK.productId,
-      productSlug: product?.slug ?? UNLOCK_FALLBACK.productSlug,
-      productName: product?.name ?? UNLOCK_FALLBACK.productName,
-      priceInPi: TEST_PI_PRICE,
-    });
-    writeLocalDeed(next);
-    setLocalDeed(next);
-  }, [localDeed, product, restoreOwned]);
-
-  const resolveOwnedDeed = async (): Promise<OwnershipDeed | null> => {
-    if (!sdk) return null;
-    await refreshPurchases();
-    let qty = 0;
-    try {
-      const { purchases } = await sdk.state.restore();
-      qty = purchaseQtyForUnlock(purchases, product, [
-        localDeed?.productId,
-        localDeed?.productSlug,
-      ]);
-    } catch {
-      /* restore failed — do not treat local deed as ownership */
-    }
-    if (qty <= 0) return null;
-    const existing = readLocalDeed();
-    const deed =
-      existing ??
-      buildRestoreSealDeed({
-        productId: product?.id ?? UNLOCK_FALLBACK.productId,
-        productSlug: product?.slug ?? UNLOCK_FALLBACK.productSlug,
-        productName: product?.name ?? UNLOCK_FALLBACK.productName,
-        priceInPi: TEST_PI_PRICE,
-      });
-    if (!existing) writeLocalDeed(deed);
-    setLocalDeed(deed);
-    return deed;
-  };
+  }, [purchasesReady]);
 
   const handlePay = async () => {
-    if (!sdk || !product || !catalogPriceOk || busy || owned) return;
+    if (busy || isUnlocked) return;
     setBusy(true);
     document.body.classList.add("pk-pi-checkout");
     try {
-      const already = await resolveOwnedDeed();
-      if (already) {
-        onPurchaseSealed();
-        toast("Already unlocked on this Pi account.");
-        onUnlocked();
-        return;
-      }
-
-      const result = await sdk.makePurchase(product.slug);
-      if (result.ok) {
-        const deed = await sealPurchaseDeed({
-          productId: product.id,
-          productSlug: product.slug,
-          productName: product.name,
-          priceInPi: TEST_PI_PRICE,
-          paymentId: result.paymentId,
-          txid: result.txid,
-          sdk,
-        });
-        setLocalDeed(deed);
-        onPurchaseSealed();
-        onUnlocked();
-        // Restore can lag behind checkout — retry so gates + ownership card sync.
-        for (let i = 0; i < 4; i += 1) {
-          await refreshPurchases();
-          try {
-            const { purchases } = await sdk.state.restore();
-            if (
-              purchaseQtyForUnlock(purchases, product, [
-                deed.productId,
-                deed.productSlug,
-              ]) > 0
-            ) {
-              break;
-            }
-          } catch {
-            /* keep retrying */
-          }
-          await new Promise((r) => window.setTimeout(r, 700));
-        }
-        await refreshPurchases();
-        toast("Purchase sealed — ownership proof saved");
-        return;
-      }
-
-      const recovered = await resolveOwnedDeed();
-      if (recovered) {
-        onPurchaseSealed();
-        toast("Already unlocked on this Pi account.");
-        onUnlocked();
-        return;
-      }
-      toast("Purchase did not complete. Please try again.");
-    } catch (error) {
-      const code = (error as { code?: string; name?: string }).code;
-      if (code !== "purchase_cancelled" && code !== "product_not_found") {
-        const recovered = await resolveOwnedDeed();
-        if (recovered) {
-          onPurchaseSealed();
-          toast("Already unlocked on this Pi account.");
-          onUnlocked();
-          return;
-        }
-      }
-      if (code === "purchase_cancelled") {
-        toast("Purchase cancelled");
-      } else if (code === "product_not_found") {
-        toast("This product is unavailable in App Studio");
-      } else {
-        toast("Purchase could not be completed");
-      }
+      await purchaseUnlock();
     } finally {
       document.body.classList.remove("pk-pi-checkout");
       setBusy(false);
     }
   };
 
-  const checking = !purchasesReady && !owned;
+  const gateReady = purchasesReady || checkTimedOut || hasError;
+  const checking = !gateReady && !isUnlocked;
   const appName = "Peaks 3141";
 
   return (
@@ -357,32 +192,30 @@ function PeakPaywall({
         <h2 className="font-display mt-2 text-[1.85rem] leading-tight text-[var(--pk-ink)]">
           {checking
             ? PAYMENT_ENV.checkingTitle
-            : owned
+            : isUnlocked
               ? PAYMENT_ENV.unlockedTitle
               : PAYMENT_ENV.payTitle}
         </h2>
         <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--pk-muted)]">
           {checking
             ? PAYMENT_ENV.checkingBody
-            : owned
+            : isUnlocked
               ? PAYMENT_ENV.unlockedBody(appName)
               : PAYMENT_ENV.testNote}
         </p>
 
-        {!checking && !owned ? (
+        {!checking && !isUnlocked ? (
           <>
             <div className="mt-5 rounded-2xl border border-[var(--pk-line)] bg-black/25 px-4 py-3">
               {!isAuthenticated ? (
                 <p className="text-sm text-[var(--pk-amber)]">{authHint}</p>
-              ) : product && !catalogPriceOk ? (
+              ) : productCatalogIssue ? (
                 <p className="text-sm text-[var(--pk-amber)]">
-                  {PAYMENT_ENV.catalogPriceMismatch(product.price_in_pi)}
+                  {productCatalogIssue}
                 </p>
               ) : productPrice === null ? (
                 <p className="text-sm text-[var(--pk-amber)]">
-                  {product
-                    ? PAYMENT_ENV.loadingProduct
-                    : PAYMENT_ENV.noUnlockProduct}
+                  {PAYMENT_ENV.noUnlockProduct}
                 </p>
               ) : (
                 <>
@@ -451,8 +284,9 @@ export function PeakDetail({
     setNav,
     setTab,
     recordAntipodeDiscovery,
+    isUnlocked,
+    refreshUnlockStatus,
   } = usePeaks();
-  const { products, restoredPurchases, refreshPurchases } = usePiAuth();
   const peak = getPeakById(peakId);
   const [liveTime, setLiveTime] = useState<LivePeakTime | null>(null);
   const [oppositeLive, setOppositeLive] = useState<LivePeakTime | null>(null);
@@ -500,61 +334,10 @@ export function PeakDetail({
       clearInterval(id);
     };
   }, [peakId, peak?.countryCode, peak?.lat, peak?.lon]);
-  const [unlocked, setUnlocked] = useState(false);
-  const [localDeed, setLocalDeed] = useState<OwnershipDeed | null>(null);
-  const product = useMemo(
-    () => products?.find((p) => p.id === PEAK_DETAIL_PRODUCT_ID) ?? null,
-    [products],
-  );
 
   useEffect(() => {
-    setLocalDeed(readLocalDeed());
-  }, []);
-
-  useEffect(() => {
-    void refreshPurchases();
-  }, [refreshPurchases, peakId]);
-
-  const alreadyOwned = useMemo(
-    () =>
-      hasUnlockAccess(restoredPurchases, product, localDeed, [
-        localDeed?.productId,
-        localDeed?.productSlug,
-      ]),
-    [localDeed, product, restoredPurchases],
-  );
-
-  const restoreOwned = useMemo(
-    () =>
-      isRestoreOwned(restoredPurchases, product, [
-        localDeed?.productId,
-        localDeed?.productSlug,
-      ]),
-    [localDeed?.productId, localDeed?.productSlug, product, restoredPurchases],
-  );
-
-  useEffect(() => {
-    if (alreadyOwned) setUnlocked(true);
-  }, [alreadyOwned]);
-
-  useEffect(() => {
-    const syncDeed = () => setLocalDeed(readLocalDeed());
-    window.addEventListener(OWNERSHIP_DEED_SEALED_EVENT, syncDeed);
-    return () =>
-      window.removeEventListener(OWNERSHIP_DEED_SEALED_EVENT, syncDeed);
-  }, []);
-
-  useEffect(() => {
-    if (!restoreOwned || localDeed) return;
-    const next = buildRestoreSealDeed({
-      productId: product?.id ?? UNLOCK_FALLBACK.productId,
-      productSlug: product?.slug ?? UNLOCK_FALLBACK.productSlug,
-      productName: product?.name ?? UNLOCK_FALLBACK.productName,
-      priceInPi: TEST_PI_PRICE,
-    });
-    writeLocalDeed(next);
-    setLocalDeed(next);
-  }, [localDeed, product, restoreOwned]);
+    if (peakId && !isUnlocked) void refreshUnlockStatus();
+  }, [peakId, isUnlocked, refreshUnlockStatus]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -581,7 +364,7 @@ export function PeakDetail({
 
   const found = isFound(peak.id);
   const fav = isFav(peak.id);
-  const showContent = unlocked || alreadyOwned;
+  const showContent = isUnlocked;
 
   const handleFound = () => {
     toggleFound(peak.id);
@@ -609,10 +392,7 @@ export function PeakDetail({
         </div>
         <h1 className="sr-only">Payment</h1>
         <div className="min-h-0 flex-1 overflow-y-auto">
-          <PeakPaywall
-            onUnlocked={() => setUnlocked(true)}
-            onPurchaseSealed={() => setUnlocked(true)}
-          />
+          <PeakPaywall />
         </div>
       </div>
     );

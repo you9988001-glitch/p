@@ -30,6 +30,24 @@ import {
   sanitizeDiscoveries,
   type AntipodeDiscovery,
 } from "@/lib/peaks/discoveries";
+import { PEAK_DETAIL_PRODUCT_ID } from "@/lib/product-config";
+import { sealPurchaseDeed } from "@/components/peaks/ownership-deed-card";
+import {
+  buildRestoreSealDeed,
+  readLocalDeed,
+  writeLocalDeed,
+  type OwnershipDeed,
+} from "@/lib/peaks/ownership-deed";
+import {
+  hasUnlockAccess,
+  isRestoreOwned,
+  OWNERSHIP_DEED_SEALED_EVENT,
+  purchaseQtyForUnlock,
+  TEST_PI_PRICE,
+  UNLOCK_FALLBACK,
+} from "@/lib/peaks/unlock-gate";
+import { PAYMENT_ENV, catalogPriceMatchesUnlock } from "@/lib/payment-env";
+import { resolveUnlockProduct } from "@/lib/resolve-unlock-product";
 
 export type TabId = "home" | "catalog" | "favorites";
 export type ViewMode = "list" | "grid";
@@ -120,12 +138,20 @@ interface PeaksContextValue {
 
   toasts: Toast[];
   toast: (message: string) => void;
+
+  productPrice: number | null;
+  productCatalogIssue: string | null;
+  purchasesReady: boolean;
+  isUnlocked: boolean;
+  purchaseUnlock: () => Promise<OwnershipDeed | null>;
+  refreshUnlockStatus: () => Promise<void>;
 }
 
 const PeaksContext = createContext<PeaksContextValue | undefined>(undefined);
 
 export function PeaksProvider({ children }: { children: ReactNode }) {
-  const { sdk, isAuthenticated } = usePiAuth();
+  const { sdk, isAuthenticated, products, restoredPurchases, refreshPurchases } =
+    usePiAuth();
 
   const [ready, setReady] = useState(true); // UI first — don't gate on storage
   const [indexReady, setIndexReady] = useState(false);
@@ -407,6 +433,220 @@ export function PeaksProvider({ children }: { children: ReactNode }) {
     [found, indexMap],
   );
 
+  const unlockProduct = useMemo(
+    () => resolveUnlockProduct(products, PEAK_DETAIL_PRODUCT_ID),
+    [products],
+  );
+
+  const [localDeed, setLocalDeed] = useState<OwnershipDeed | null>(() =>
+    typeof window === "undefined" ? null : readLocalDeed(),
+  );
+  const [purchaseConfirmed, setPurchaseConfirmed] = useState(false);
+
+  const purchasesReady = restoredPurchases !== null;
+
+  const unlockGate = useMemo(
+    () =>
+      hasUnlockAccess(restoredPurchases, unlockProduct, localDeed, [
+        localDeed?.productId,
+        localDeed?.productSlug,
+      ]),
+    [localDeed, restoredPurchases, unlockProduct],
+  );
+
+  const isUnlocked = unlockGate || purchaseConfirmed;
+
+  useEffect(() => {
+    const syncDeed = () => setLocalDeed(readLocalDeed());
+    syncDeed();
+    window.addEventListener(OWNERSHIP_DEED_SEALED_EVENT, syncDeed);
+    return () =>
+      window.removeEventListener(OWNERSHIP_DEED_SEALED_EVENT, syncDeed);
+  }, []);
+
+  useEffect(() => {
+    if (unlockGate) setPurchaseConfirmed(true);
+  }, [unlockGate]);
+
+  const restoreOwned = useMemo(
+    () =>
+      isRestoreOwned(restoredPurchases, unlockProduct, [
+        localDeed?.productId,
+        localDeed?.productSlug,
+      ]),
+    [localDeed?.productId, localDeed?.productSlug, restoredPurchases, unlockProduct],
+  );
+
+  useEffect(() => {
+    if (!restoreOwned || localDeed) return;
+    const next = buildRestoreSealDeed({
+      productId: unlockProduct?.id ?? UNLOCK_FALLBACK.productId,
+      productSlug: unlockProduct?.slug ?? UNLOCK_FALLBACK.productSlug,
+      productName: unlockProduct?.name ?? UNLOCK_FALLBACK.productName,
+      priceInPi: TEST_PI_PRICE,
+    });
+    writeLocalDeed(next);
+    setLocalDeed(next);
+  }, [localDeed, restoreOwned, unlockProduct]);
+
+  const refreshUnlockStatus = useCallback(async () => {
+    await refreshPurchases();
+    setLocalDeed(readLocalDeed());
+  }, [refreshPurchases]);
+
+  const purchaseUnlock = useCallback(async (): Promise<OwnershipDeed | null> => {
+    if (!sdk) {
+      toast("Peaks3141 is not available right now.");
+      return null;
+    }
+
+    const productMeta = unlockProduct ?? {
+      id: UNLOCK_FALLBACK.productId,
+      slug: UNLOCK_FALLBACK.productSlug,
+      name: UNLOCK_FALLBACK.productName,
+      price_in_pi: UNLOCK_FALLBACK.priceInPi,
+    };
+
+    const resolveOwnedDeed = async (): Promise<OwnershipDeed | null> => {
+      const existing = readLocalDeed();
+      if (
+        hasUnlockAccess(restoredPurchases, unlockProduct, existing, [
+          existing?.productId,
+          existing?.productSlug,
+          productMeta.id,
+          productMeta.slug,
+        ])
+      ) {
+        setLocalDeed(existing);
+        setPurchaseConfirmed(true);
+        return existing;
+      }
+
+      await refreshPurchases();
+      let qty = 0;
+      try {
+        const { purchases } = await sdk.state.restore();
+        qty = purchaseQtyForUnlock(purchases, unlockProduct, [
+          localDeed?.productId,
+          localDeed?.productSlug,
+          productMeta.id,
+          productMeta.slug,
+        ]);
+      } catch {
+        /* restore failed */
+      }
+      if (qty <= 0) return null;
+
+      const deed =
+        existing ??
+        buildRestoreSealDeed({
+          productId: productMeta.id,
+          productSlug: productMeta.slug,
+          productName: productMeta.name,
+          priceInPi: TEST_PI_PRICE,
+        });
+      if (!existing) writeLocalDeed(deed);
+      setLocalDeed(deed);
+      setPurchaseConfirmed(true);
+      return deed;
+    };
+
+    const already = await resolveOwnedDeed();
+    if (already) {
+      toast("Already unlocked on this Pi account.");
+      return already;
+    }
+
+    if (!unlockProduct) {
+      toast("Peaks3141 is not available right now.");
+      return null;
+    }
+    if (!catalogPriceMatchesUnlock(unlockProduct.price_in_pi)) {
+      toast(PAYMENT_ENV.catalogPriceMismatch(unlockProduct.price_in_pi));
+      return null;
+    }
+
+    try {
+      const result = await sdk.makePurchase(unlockProduct.slug);
+      if (!result?.ok) {
+        const recovered = await resolveOwnedDeed();
+        if (recovered) {
+          toast("Already unlocked on this Pi account.");
+          return recovered;
+        }
+        toast("Purchase did not complete. Please try again.");
+        return null;
+      }
+      const deed = await sealPurchaseDeed({
+        productId: unlockProduct.id,
+        productSlug: unlockProduct.slug,
+        productName: unlockProduct.name,
+        priceInPi: TEST_PI_PRICE,
+        paymentId: result.paymentId,
+        txid: result.txid,
+        sdk,
+      });
+      setLocalDeed(deed);
+      setPurchaseConfirmed(true);
+      for (let i = 0; i < 4; i += 1) {
+        await refreshPurchases();
+        try {
+          const { purchases } = await sdk.state.restore();
+          if (
+            purchaseQtyForUnlock(purchases, unlockProduct, [
+              deed.productId,
+              deed.productSlug,
+            ]) > 0
+          ) {
+            break;
+          }
+        } catch {
+          /* retry */
+        }
+        await new Promise((r) => window.setTimeout(r, 700));
+      }
+      await refreshPurchases();
+      toast("Purchase sealed — ownership proof saved");
+      return deed;
+    } catch (error) {
+      const code = (error as { code?: string })?.code;
+      if (code !== "purchase_cancelled" && code !== "product_not_found") {
+        const recovered = await resolveOwnedDeed();
+        if (recovered) {
+          toast("Already unlocked on this Pi account.");
+          return recovered;
+        }
+      }
+      toast(
+        code === "purchase_cancelled"
+          ? "Purchase cancelled"
+          : code === "product_not_found"
+            ? "This product is unavailable in App Studio"
+            : "Purchase could not be completed",
+      );
+      return null;
+    }
+  }, [
+    localDeed?.productId,
+    localDeed?.productSlug,
+    refreshPurchases,
+    restoredPurchases,
+    sdk,
+    toast,
+    unlockProduct,
+  ]);
+
+  const productCatalogIssue = useMemo(() => {
+    if (!unlockProduct) return null;
+    if (!catalogPriceMatchesUnlock(unlockProduct.price_in_pi)) {
+      return PAYMENT_ENV.catalogPriceMismatch(unlockProduct.price_in_pi);
+    }
+    return null;
+  }, [unlockProduct]);
+
+  const productPrice =
+    unlockProduct && !productCatalogIssue ? TEST_PI_PRICE : null;
+
   const value: PeaksContextValue = {
     ready,
     storageTrouble,
@@ -431,6 +671,12 @@ export function PeaksProvider({ children }: { children: ReactNode }) {
     setNav,
     toasts,
     toast,
+    productPrice,
+    productCatalogIssue,
+    purchasesReady,
+    isUnlocked,
+    purchaseUnlock,
+    refreshUnlockStatus,
   };
 
   return (
