@@ -19,7 +19,7 @@ export type CodeArcheApp = {
 
 /** Frontend host derived from each app’s App Studio backend id in system-config.
  *  NOTE: this is the shared App Studio engine host — NOT the public Pi app URL.
- *  Public Peaks/Voice links must use each app’s `*.pinet.com` domain. */
+ *  Public Peaks/Voice links use Pi Portal Production URL (Vercel / custom domain). */
 export const APP_STUDIO_HOST =
   "https://appstudio-u7cm9zhmha0ruwv8.piappengine.com";
 
@@ -31,17 +31,17 @@ function publicAppUrl(envKey: string, fallback: string): string {
 /** Pi Portal Production URL (Vercel or custom domain). */
 export const PEAKS3141_URL = publicAppUrl(
   "NEXT_PUBLIC_PEAKS3141_URL",
-  "https://p-jeongs-projects-8253a162.vercel.app",
+  "https://p-rho-rust.vercel.app",
 );
 
 export const VOICE3141_URL = publicAppUrl(
   "NEXT_PUBLIC_VOICE3141_URL",
-  "https://v-jeongs-projects-8253a162.vercel.app",
+  "https://v-beta-two.vercel.app",
 );
 
 /**
  * Curator order (fixed): Pass Pi → ARCHE1 → ARCHE0 → Peaks3141 → Voice3141 → Pulse Pi.
- * Peaks/Voice public URLs: set NEXT_PUBLIC_* on Vercel (or legacy pinet fallbacks).
+ * Peaks/Voice public URLs: set NEXT_PUBLIC_* on Vercel or use defaults below.
  */
 export const CODE_ARCHE_APPS: CodeArcheApp[] = [
   {
