@@ -9,7 +9,7 @@ import React, {
   type ReactNode,
 } from "react";
 import { PI_NETWORK_CONFIG } from "@/lib/system-config";
-import { buildPiSdk, createSdk } from "@/lib/pi";
+import { createMainnetStandaloneSdk } from "@/lib/mainnet-standalone-sdk";
 import type {
   Product,
   SDKLiteInstance,
@@ -268,40 +268,18 @@ export function PiAuthProvider({ children }: { children: ReactNode }) {
         version: "2.0",
         sandbox: PI_NETWORK_CONFIG.SANDBOX,
       });
-      setAuthMessage("Loading SDKLite...");
-      await loadSDKLite();
 
-      setAuthMessage("Initializing SDKLite...");
-      const sdkLite = await window.SDKLite.init();
+      // Pass Pi / mainnet on Vercel — no App Studio SDKLite or piappengine backend.
+      setAuthMessage("Signing in with Pi (payments)…");
+      await window.Pi.authenticate(["payments"], (payment) => {
+        console.warn("[PiAuth] Incomplete payment — resolve in Pi Wallet", payment);
+      });
 
-      // Auth + user-state are served by the @pi-sdk npm packages; SDKLite still backs
-      // payments, ads, products and restore until those packages ship. The adapter keeps
-      // the SDKLiteInstance surface so nothing downstream changes.
-      setAuthMessage("Logging in...");
-      const pi = buildPiSdk();
-      await pi.auth.login();
-      const success = await sdkLite.login();
-      if (!success) {
-        throw new Error("Login failed. Please try again.");
-      }
-
-      const sdkInstance = createSdk(sdkLite, pi);
+      const sdkInstance = createMainnetStandaloneSdk();
       setSdk(sdkInstance);
       setIsAuthenticated(true);
       await fetchProducts(sdkInstance);
-
-      try {
-        const { purchases } = await withTimeout(
-          sdkInstance.state.restore(),
-          12000,
-          "restore purchases",
-        );
-        setRestoredPurchases(Array.isArray(purchases) ? purchases : []);
-        console.log("[PiAuth] Purchases restored", purchases);
-      } catch (e) {
-        console.error("[PiAuth] Failed to restore purchases:", e);
-        setRestoredPurchases([]);
-      }
+      setRestoredPurchases([]);
     } catch (err) {
       console.error("SDKLite initialization failed:", err);
       setHasError(true);

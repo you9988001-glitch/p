@@ -74,6 +74,10 @@ declare global {
     };
     Pi: {
       init: (config: { version: string; sandbox?: boolean }) => Promise<void>;
+      authenticate: (
+        scopes: string[],
+        onIncompletePaymentFound?: (payment: unknown) => void,
+      ) => Promise<{ accessToken?: string; user?: { username?: string } }>;
       createPayment: (
         paymentData: {
           amount: number;
