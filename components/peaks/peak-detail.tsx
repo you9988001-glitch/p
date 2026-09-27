@@ -524,6 +524,15 @@ export function PeakDetail({
     [localDeed, product, restoredPurchases],
   );
 
+  const restoreOwned = useMemo(
+    () =>
+      isRestoreOwned(restoredPurchases, product, [
+        localDeed?.productId,
+        localDeed?.productSlug,
+      ]),
+    [localDeed?.productId, localDeed?.productSlug, product, restoredPurchases],
+  );
+
   useEffect(() => {
     if (alreadyOwned) setUnlocked(true);
   }, [alreadyOwned]);
