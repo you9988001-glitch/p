@@ -14,6 +14,8 @@ import { createPiSDK } from "@swetate/core";
 import { authPlugin } from "@swetate/auth";
 import { userStatePlugin } from "@swetate/user-state";
 import { PI_NETWORK_CONFIG } from "@/lib/system-config";
+import { createMainnetUnlockPayment } from "@/lib/mainnet-create-payment";
+import { fallbackUnlockProducts } from "@/lib/unlock-catalog-fallback";
 import type { RestoreOptions, SDKLiteInstance, UserStateRecord } from "@/lib/sdklite-types";
 
 interface PiUser {
@@ -64,14 +66,24 @@ export function createSdk(sdkLite: SDKLiteInstance, pi: PiSdk): SDKLiteInstance 
   // silently dropping prototype methods. Capture them in plain objects first so
   // the spread-and-override pattern works as expected.
   const sdkLiteMethods = {
-    makePurchase: (productId: string) => sdkLite.makePurchase(productId),
+    makePurchase: (productId: string) => createMainnetUnlockPayment(productId),
     isAdNetworkSupported: () => sdkLite.isAdNetworkSupported(),
     showInterstitial: () => sdkLite.showInterstitial(),
     showRewarded: (productId: string) => sdkLite.showRewarded(productId),
   };
 
   const sdkLiteStateMethods = {
-    products: () => sdkLite.state.products(),
+    products: async () => {
+      try {
+        const res = await sdkLite.state.products();
+        if (Array.isArray(res?.products) && res.products.length > 0) {
+          return res;
+        }
+      } catch {
+        /* use mainnet catalog fallback — no App Studio backend required */
+      }
+      return { products: fallbackUnlockProducts() };
+    },
     purchases: () => sdkLite.state.purchases(),
     consume: (productId: string, quantity?: number) => sdkLite.state.consume(productId, quantity),
     restore: (options?: RestoreOptions) => sdkLite.state.restore(options),

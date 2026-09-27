@@ -74,6 +74,22 @@ declare global {
     };
     Pi: {
       init: (config: { version: string; sandbox?: boolean }) => Promise<void>;
+      createPayment: (
+        paymentData: {
+          amount: number;
+          memo: string;
+          metadata?: Record<string, string>;
+        },
+        callbacks: {
+          onReadyForServerApproval: (paymentId: string) => void | Promise<void>;
+          onReadyForServerCompletion: (
+            paymentId: string,
+            txid: string,
+          ) => void | Promise<void>;
+          onCancel: (paymentId: string) => void;
+          onError: (error: { message?: string }, payment?: unknown) => void;
+        },
+      ) => void;
     };
   }
 }
