@@ -46,7 +46,9 @@ import {
   type OwnershipDeed,
 } from "@/lib/peaks/ownership-deed";
 import {
+  hasUnlockAccess,
   isRestoreOwned,
+  OWNERSHIP_DEED_SEALED_EVENT,
   purchaseQtyForUnlock,
   TEST_PI_PRICE,
   UNLOCK_FALLBACK,
@@ -193,14 +195,13 @@ function PeakPaywall({
 
   const restoreOwned = useMemo(
     () =>
-      isRestoreOwned(restoredPurchases, product, [
+      hasUnlockAccess(restoredPurchases, product, localDeed, [
         localDeed?.productId,
         localDeed?.productSlug,
       ]),
-    [localDeed?.productId, localDeed?.productSlug, product, restoredPurchases],
+    [localDeed, product, restoredPurchases],
   );
 
-  /** Unlock only from Pi restore — local deed is display/cache only. */
   const owned = restoreOwned;
 
   useEffect(() => {
@@ -514,21 +515,25 @@ export function PeakDetail({
     void refreshPurchases();
   }, [refreshPurchases, peakId]);
 
-  const restoreOwned = useMemo(
+  const alreadyOwned = useMemo(
     () =>
-      isRestoreOwned(restoredPurchases, product, [
+      hasUnlockAccess(restoredPurchases, product, localDeed, [
         localDeed?.productId,
         localDeed?.productSlug,
       ]),
-    [localDeed?.productId, localDeed?.productSlug, product, restoredPurchases],
+    [localDeed, product, restoredPurchases],
   );
-
-  /** Unlock only from Pi restore — local deed is display/cache only. */
-  const alreadyOwned = restoreOwned;
 
   useEffect(() => {
     if (alreadyOwned) setUnlocked(true);
   }, [alreadyOwned]);
+
+  useEffect(() => {
+    const syncDeed = () => setLocalDeed(readLocalDeed());
+    window.addEventListener(OWNERSHIP_DEED_SEALED_EVENT, syncDeed);
+    return () =>
+      window.removeEventListener(OWNERSHIP_DEED_SEALED_EVENT, syncDeed);
+  }, []);
 
   useEffect(() => {
     if (!restoreOwned || localDeed) return;

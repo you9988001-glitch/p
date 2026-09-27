@@ -62,3 +62,36 @@ export function isRestoreOwned(
 ): boolean {
   return purchaseQtyForUnlock(purchases, product, extraIds) > 0;
 }
+
+/** Mainnet: sealed deed after Pi.createPayment (paymentId + txid). */
+export function isSealedPurchaseDeed(
+  deed:
+    | {
+        source?: string;
+        paymentId?: string | null;
+        txid?: string | null;
+        productId?: string;
+        productSlug?: string;
+      }
+    | null
+    | undefined,
+): boolean {
+  if (!deed || deed.source !== "purchase") return false;
+  if (!deed.paymentId?.trim() || !deed.txid?.trim()) return false;
+  const ids = new Set(collectUnlockIds(null, [deed.productId, deed.productSlug]));
+  return (
+    ids.has(deed.productId) ||
+    ids.has(deed.productSlug) ||
+    UNLOCK_PRODUCT_IDS.some((id) => id === deed.productId || id === deed.productSlug)
+  );
+}
+
+export function hasUnlockAccess(
+  purchases: UserPurchaseBalance[] | null | undefined,
+  product: { id?: string; slug?: string } | null | undefined,
+  localDeed: Parameters<typeof isSealedPurchaseDeed>[0],
+  extraIds: Array<string | null | undefined> = [],
+): boolean {
+  if (isSealedPurchaseDeed(localDeed)) return true;
+  return isRestoreOwned(purchases, product, extraIds);
+}
