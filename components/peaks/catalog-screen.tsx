@@ -31,7 +31,7 @@ export function CatalogScreen({ onOpen }: { onOpen: (id: string) => void }) {
   }, [peakIndex, q, continent]);
 
   return (
-    <div className="mx-auto max-w-md px-5 pt-5 pb-6">
+    <div className="mx-auto w-full max-w-md px-5 pt-5 pb-6 md:max-w-2xl">
       <h1 className="font-display text-[1.9rem] text-[var(--pk-ink)]">Catalog</h1>
       <p className="mt-1 text-sm text-[var(--pk-muted)]">
         Fast search across {indexReady ? formatInt(peakIndex.length) : "…"} peaks.

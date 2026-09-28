@@ -7,6 +7,10 @@ import { useLongPress } from "@/lib/peaks/use-long-press";
 import { PeakArt, FoundDot } from "@/components/peaks/pieces";
 import { cx, IconStar, IconStarFilled } from "@/components/peaks/ui";
 
+/** List-row “door” art — same scale on Catalog tab and region drill-down lists. */
+const LIST_PEAK_ART =
+  "h-[4.75rem] w-[4.75rem] shrink-0 rounded-xl sm:h-20 sm:w-20 md:h-[5.25rem] md:w-[5.25rem] md:rounded-2xl";
+
 function FavButton({ id }: { id: string }) {
   const { isFav, toggleFav } = usePeaks();
   const fav = isFav(id);
@@ -52,10 +56,10 @@ export function PeakListRow({
         if (didLongPress()) return;
         onOpen(peak.id);
       }}
-      className="pk-press flex w-full items-center gap-3 rounded-2xl border border-[var(--pk-line)] bg-[var(--pk-panel)] p-2.5 text-left select-none"
+      className="pk-press flex w-full items-center gap-3.5 rounded-2xl border border-[var(--pk-line)] bg-[var(--pk-panel)] p-3 text-left select-none"
       style={onRequestRemove ? { touchAction: "manipulation" } : undefined}
     >
-      <PeakArt peak={peak} className="h-16 w-16 shrink-0 rounded-xl" />
+      <PeakArt peak={peak} className={LIST_PEAK_ART} />
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-1.5">
           <p className="pk-clamp-1 font-display text-[1.05rem] leading-snug text-[var(--pk-ink)]">
