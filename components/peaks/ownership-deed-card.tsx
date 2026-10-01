@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePiAuth } from "@/contexts/pi-auth-context";
 import { PEAK_DETAIL_PRODUCT_ID } from "@/lib/product-config";
-import { syncOwnershipToServer } from "@/lib/fetch-account-ownership";
 import {
   buildPurchaseDeed,
   buildRestoreSealDeed,
@@ -18,7 +17,6 @@ import {
 import {
   isRestoreOwned,
   OWNERSHIP_DEED_SEALED_EVENT,
-  TEST_PI_PRICE,
   UNLOCK_FALLBACK,
 } from "@/lib/peaks/unlock-gate";
 import { Button } from "@/components/peaks/ui";
@@ -81,93 +79,17 @@ export function OwnershipDeedBody({ deed }: { deed: OwnershipDeed }) {
   );
 }
 
-/** Always available: Sync to Redis, with Payment ID field (works after cache clear). */
-function OwnershipSyncModal({
+export function OwnershipDeedModal({
   deed,
+  title,
   onClose,
-  onSynced,
 }: {
-  deed: OwnershipDeed | null;
+  deed: OwnershipDeed;
+  title?: string;
   onClose: () => void;
-  onSynced: (deed: OwnershipDeed) => void;
 }) {
-  const { sdk } = usePiAuth();
   const [mounted, setMounted] = useState(false);
-  const [syncing, setSyncing] = useState(false);
-  const [syncNote, setSyncNote] = useState<string | null>(null);
-  const [paymentIdInput, setPaymentIdInput] = useState(
-    () => deed?.paymentId?.trim() || "",
-  );
   useEffect(() => setMounted(true), []);
-  useEffect(() => {
-    setPaymentIdInput(deed?.paymentId?.trim() || "");
-  }, [deed?.paymentId]);
-
-  const handleSyncToAccount = async () => {
-    if (syncing) return;
-    const paymentId = paymentIdInput.trim();
-    if (!paymentId) {
-      setSyncNote(
-        "Payment ID를 입력하세요. (캐시 삭제 후에는 로컬에 ID가 없습니다. Pi 결제 내역의 Payment ID가 필요합니다.)",
-      );
-      return;
-    }
-    setSyncing(true);
-    setSyncNote(null);
-    try {
-      const result = await syncOwnershipToServer(paymentId);
-      if (!result.ok) {
-        setSyncNote(result.error || "Server sync failed.");
-        return;
-      }
-      if (!result.kvConfigured) {
-        setSyncNote(
-          "KV not configured on Vercel — cannot write ownership:peaks3141.",
-        );
-        return;
-      }
-      if (result.alreadyInKv || (result.wroteToKv && result.owned)) {
-        const pid = result.paymentId || paymentId;
-        const txid = result.txid || deed?.txid || "";
-        const next = buildPurchaseDeed({
-          productId: result.productId || deed?.productId || UNLOCK_FALLBACK.productId,
-          productSlug: deed?.productSlug || UNLOCK_FALLBACK.productSlug,
-          productName: deed?.productName || UNLOCK_FALLBACK.productName,
-          priceInPi: deed?.priceInPi ?? TEST_PI_PRICE,
-          paymentId: pid,
-          txid,
-          username: result.username,
-        });
-        writeLocalDeed(next);
-        if (sdk) {
-          try {
-            await sdk.state.set(OWNERSHIP_STATE_KEY, { deed: next });
-          } catch {
-            /* local ok */
-          }
-        }
-        onSynced(next);
-        setSyncNote(
-          result.alreadyInKv
-            ? `Already on server: ownership:peaks3141:${result.uid ?? "…"}`
-            : `Wrote ownership:peaks3141:${result.uid ?? "…"}`,
-        );
-        return;
-      }
-      if (!result.owned) {
-        setSyncNote(
-          "Pi did not confirm this Payment ID as a completed Peaks unlock for your account.",
-        );
-        return;
-      }
-      setSyncNote(
-        "Verified owned, but Redis write failed — check KV env on project p.",
-      );
-    } finally {
-      setSyncing(false);
-    }
-  };
-
   if (!mounted) return null;
 
   return createPortal(
@@ -181,52 +103,12 @@ function OwnershipSyncModal({
           CODE ARCHE · ownership
         </p>
         <h2 className="font-display mt-2 text-[1.7rem] text-[var(--pk-ink)]">
-          {deed ? "Peaks 3141 ownership proof" : "Sync Peaks ownership"}
+          {title ?? "Peaks 3141 ownership proof"}
         </h2>
-        {deed ? (
-          <div className="mt-4">
-            <OwnershipDeedBody deed={deed} />
-          </div>
-        ) : (
-          <p className="mt-3 text-[0.88rem] leading-relaxed text-[var(--pk-muted)]">
-            이 기기 캐시에 구매 기록이 없습니다. Pi에서 완료된 Peaks 결제의
-            Payment ID를 넣으면 서버(Redis)에 ownership:peaks3141 을 남깁니다.
-          </p>
-        )}
-
-        <label className="mt-4 block">
-          <span className="text-[0.7rem] font-semibold uppercase tracking-wide text-[var(--pk-faint)]">
-            Payment ID
-          </span>
-          <input
-            value={paymentIdInput}
-            onChange={(e) => setPaymentIdInput(e.target.value)}
-            placeholder="paste Pi payment id"
-            className="pk-nums mt-1.5 w-full rounded-xl border border-[var(--pk-line)] bg-black/25 px-3 py-2.5 text-[0.9rem] text-[var(--pk-ink)] outline-none focus:border-[var(--pk-amber)]"
-            autoCapitalize="off"
-            autoCorrect="off"
-            spellCheck={false}
-          />
-        </label>
-
-        {syncNote ? (
-          <p className="mt-3 text-[0.8rem] leading-relaxed text-[var(--pk-amber)]">
-            {syncNote}
-          </p>
-        ) : null}
-
-        <Button
-          className="mt-5 w-full"
-          variant="primary"
-          disabled={syncing}
-          onClick={() => void handleSyncToAccount()}
-        >
-          {syncing ? "Syncing to account…" : "Sync ownership to account"}
-        </Button>
-        <p className="mt-2 text-center text-[0.72rem] leading-relaxed text-[var(--pk-faint)]">
-          Pi 검증 후 Redis에 ownership:peaks3141 기록 (로컬 캐시만으로는 불가)
-        </p>
-        <Button className="mt-3 w-full" onClick={onClose}>
+        <div className="mt-4">
+          <OwnershipDeedBody deed={deed} />
+        </div>
+        <Button className="mt-5 w-full" onClick={onClose}>
           Close
         </Button>
       </div>
@@ -323,28 +205,87 @@ export function OwnershipProofCard() {
         </p>
         <p className="mt-1 text-[0.95rem] text-[var(--pk-ink)]">
           {owned
-            ? "View / sync Peaks 3141 ownership"
-            : "Sync ownership to account (Redis)"}
+            ? "View your Peaks 3141 purchase record"
+            : "No ownership yet"}
         </p>
-        {deed ? (
+        {deed && (
           <p className="pk-nums mt-1 text-[0.8rem] text-[var(--pk-faint)]">
             {PAYMENT_ENV.deedPaidLabel(deed.priceInPi)} ·{" "}
             {formatDeedDate(deed.purchasedAt)}
           </p>
-        ) : (
-          <p className="mt-1 text-[0.8rem] text-[var(--pk-faint)]">
-            Tap to enter Payment ID and write ownership:peaks3141
-          </p>
         )}
       </button>
-      {open ? (
-        <OwnershipSyncModal
-          deed={deed}
-          onClose={() => setOpen(false)}
-          onSynced={(next) => setDeed(next)}
-        />
-      ) : null}
+      {open && deed && (
+        <OwnershipDeedModal deed={deed} onClose={() => setOpen(false)} />
+      )}
+      {open && !deed && owned && (
+        <ConfirmingOwnershipModal onClose={() => setOpen(false)} />
+      )}
+      {open && !deed && !owned && (
+        <NoOwnershipModal onClose={() => setOpen(false)} />
+      )}
     </>
+  );
+}
+
+function ConfirmingOwnershipModal({ onClose }: { onClose: () => void }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
+  return createPortal(
+    <div className="fixed inset-0 z-[140] flex items-end justify-center bg-black/80 p-4 pk-fade-in sm:items-center">
+      <div
+        role="dialog"
+        aria-modal="true"
+        className="w-full max-w-md rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.65)]"
+      >
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[var(--pk-forest)]">
+          CODE ARCHE · ownership
+        </p>
+        <h2 className="font-display mt-2 text-[1.7rem] text-[var(--pk-ink)]">
+          Confirming your purchase
+        </h2>
+        <p className="mt-3 text-[0.88rem] leading-relaxed text-[var(--pk-muted)]">
+          Pi has confirmed your ownership, but the record is still being sealed
+          on this device. Reopen this card in a moment to see the full details.
+        </p>
+        <Button className="mt-5 w-full" onClick={onClose}>
+          Close
+        </Button>
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
+function NoOwnershipModal({ onClose }: { onClose: () => void }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
+  return createPortal(
+    <div className="fixed inset-0 z-[140] flex items-end justify-center bg-black/80 p-4 pk-fade-in sm:items-center">
+      <div
+        role="dialog"
+        aria-modal="true"
+        className="w-full max-w-md rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.65)]"
+      >
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[var(--pk-forest)]">
+          CODE ARCHE · ownership
+        </p>
+        <h2 className="font-display mt-2 text-[1.7rem] text-[var(--pk-ink)]">
+          No ownership yet
+        </h2>
+        <p className="mt-3 text-[0.88rem] leading-relaxed text-[var(--pk-muted)]">
+          Unlock any peak&apos;s detail page to seal your ownership record here.
+        </p>
+        <Button className="mt-5 w-full" onClick={onClose}>
+          Close
+        </Button>
+      </div>
+    </div>,
+    document.body,
   );
 }
 

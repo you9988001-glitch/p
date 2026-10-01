@@ -48,7 +48,6 @@ import {
 } from "@/lib/peaks/unlock-gate";
 import { PAYMENT_ENV, catalogPriceMatchesUnlock } from "@/lib/payment-env";
 import { resolveUnlockProduct } from "@/lib/resolve-unlock-product";
-import { syncOwnershipToServer } from "@/lib/fetch-account-ownership";
 import { isPaywallPreviewOnly } from "@/lib/paywall-preview-only";
 
 export type TabId = "home" | "catalog" | "favorites";
@@ -520,11 +519,6 @@ export function PeaksProvider({ children }: { children: ReactNode }) {
           productMeta.slug,
         ])
       ) {
-        // Local cache already unlocks — still force server verify + KV write when
-        // we have a Payment ID (unlock button used to skip this entirely).
-        if (existing?.paymentId?.trim()) {
-          void syncOwnershipToServer(existing.paymentId);
-        }
         setLocalDeed(existing);
         setPurchaseConfirmed(true);
         return existing;
@@ -554,9 +548,6 @@ export function PeaksProvider({ children }: { children: ReactNode }) {
           priceInPi: TEST_PI_PRICE,
         });
       if (!existing) writeLocalDeed(deed);
-      if (deed.paymentId?.trim()) {
-        void syncOwnershipToServer(deed.paymentId);
-      }
       setLocalDeed(deed);
       setPurchaseConfirmed(true);
       return deed;
