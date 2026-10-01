@@ -11,22 +11,42 @@ import type { PiMeUser } from "@/lib/server/pi-me";
 export async function resolveAccountOwnership(
   user: PiMeUser,
   paymentIdHint?: string | null,
-): Promise<{ owned: boolean; record: UnlockRecord | null }> {
+): Promise<{
+  owned: boolean;
+  record: UnlockRecord | null;
+  alreadyInKv: boolean;
+  wroteToKv: boolean;
+}> {
   const productId = defaultProductId();
 
   const existing = await getUnlockRecord(user.uid);
   if (existing?.productId) {
-    return { owned: true, record: existing };
+    return {
+      owned: true,
+      record: existing,
+      alreadyInKv: true,
+      wroteToKv: false,
+    };
   }
 
   const hint = paymentIdHint?.trim();
   if (!hint) {
-    return { owned: false, record: null };
+    return {
+      owned: false,
+      record: null,
+      alreadyInKv: false,
+      wroteToKv: false,
+    };
   }
 
   const { ok, payment } = await getPiPayment(hint);
   if (!ok || !payment || !isValidUnlockPayment(payment, user.uid, productId)) {
-    return { owned: false, record: null };
+    return {
+      owned: false,
+      record: null,
+      alreadyInKv: false,
+      wroteToKv: false,
+    };
   }
 
   const txid = payment.transaction?.txid ?? "";
@@ -38,6 +58,6 @@ export async function resolveAccountOwnership(
     txid,
     completedAt: new Date().toISOString(),
   };
-  await saveUnlockRecord(record);
-  return { owned: true, record };
+  const wroteToKv = await saveUnlockRecord(record);
+  return { owned: true, record, alreadyInKv: false, wroteToKv };
 }

@@ -25,19 +25,20 @@ export async function POST(req: Request) {
       );
     }
 
-    const { owned, record } = await resolveAccountOwnership(
-      user,
-      paymentId || null,
-    );
+    const { owned, record, alreadyInKv, wroteToKv } =
+      await resolveAccountOwnership(user, paymentId || null);
 
     return NextResponse.json({
       ok: true,
       owned,
+      alreadyInKv,
+      wroteToKv,
       kvConfigured: ownershipKvConfigured(),
       productId: record?.productId ?? null,
       paymentId: record?.paymentId ?? null,
       txid: record?.txid ?? null,
       username: user.username,
+      uid: user.uid,
     });
   } catch (e) {
     return NextResponse.json({ ok: false, error: String(e) }, { status: 500 });

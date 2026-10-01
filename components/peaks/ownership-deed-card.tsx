@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePiAuth } from "@/contexts/pi-auth-context";
 import { PEAK_DETAIL_PRODUCT_ID } from "@/lib/product-config";
+import { syncOwnershipToServer } from "@/lib/fetch-account-ownership";
 import {
   buildPurchaseDeed,
   buildRestoreSealDeed,
@@ -89,7 +90,57 @@ export function OwnershipDeedModal({
   onClose: () => void;
 }) {
   const [mounted, setMounted] = useState(false);
+  const [syncing, setSyncing] = useState(false);
+  const [syncNote, setSyncNote] = useState<string | null>(null);
   useEffect(() => setMounted(true), []);
+
+  const handleSyncToAccount = async () => {
+    if (syncing) return;
+    const paymentId = deed.paymentId?.trim();
+    if (!paymentId) {
+      setSyncNote(
+        "No Payment ID on this device deed. Local cache alone cannot write ownership:peaks3141 — need a real purchase Payment ID.",
+      );
+      return;
+    }
+    setSyncing(true);
+    setSyncNote(null);
+    try {
+      const result = await syncOwnershipToServer(paymentId);
+      if (!result.ok) {
+        setSyncNote(result.error || "Server sync failed.");
+        return;
+      }
+      if (!result.kvConfigured) {
+        setSyncNote(
+          "KV not configured on Vercel — cannot write ownership:peaks3141.",
+        );
+        return;
+      }
+      if (result.alreadyInKv) {
+        setSyncNote(
+          `Already on server: ownership:peaks3141:${result.uid ?? "…"}`,
+        );
+        return;
+      }
+      if (result.wroteToKv && result.owned) {
+        setSyncNote(`Wrote ownership:peaks3141:${result.uid ?? "…"}`);
+        return;
+      }
+      if (!result.owned) {
+        setSyncNote(
+          "Pi did not confirm this Payment ID as a completed Peaks unlock for your account.",
+        );
+        return;
+      }
+      setSyncNote(
+        "Verified owned, but Redis write failed — check KV env on project p.",
+      );
+    } finally {
+      setSyncing(false);
+    }
+  };
+
   if (!mounted) return null;
 
   return createPortal(
@@ -108,7 +159,25 @@ export function OwnershipDeedModal({
         <div className="mt-4">
           <OwnershipDeedBody deed={deed} />
         </div>
-        <Button className="mt-5 w-full" onClick={onClose}>
+        {syncNote ? (
+          <p className="mt-3 text-[0.8rem] leading-relaxed text-[var(--pk-amber)]">
+            {syncNote}
+          </p>
+        ) : null}
+        <Button
+          className="mt-5 w-full"
+          variant="primary"
+          disabled={syncing}
+          onClick={() => void handleSyncToAccount()}
+        >
+          {syncing ? "Syncing to account…" : "Sync ownership to account"}
+        </Button>
+        <p className="mt-2 text-center text-[0.72rem] leading-relaxed text-[var(--pk-faint)]">
+          Forces a server check with Pi (not local cache) and writes{" "}
+          <span className="pk-nums">ownership:peaks3141</span> to Redis when
+          verified.
+        </p>
+        <Button className="mt-3 w-full" onClick={onClose}>
           Close
         </Button>
       </div>
