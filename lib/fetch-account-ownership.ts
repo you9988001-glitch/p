@@ -11,7 +11,9 @@ export type OwnershipSyncResult = {
   wroteToKv: boolean;
   productId: string | null;
   paymentId: string | null;
+  txid: string | null;
   uid: string | null;
+  username: string | null;
   error?: string;
 };
 
@@ -32,7 +34,9 @@ export async function syncOwnershipToServer(
       wroteToKv: false,
       productId: null,
       paymentId: null,
+      txid: null,
       uid: null,
+      username: null,
       error: "Not signed in with Pi (missing access token).",
     };
   }
@@ -53,7 +57,9 @@ export async function syncOwnershipToServer(
       wroteToKv?: boolean;
       productId?: string | null;
       paymentId?: string | null;
+      txid?: string | null;
       uid?: string | null;
+      username?: string | null;
       error?: string;
     };
     if (!r.ok || !j.ok) {
@@ -65,7 +71,9 @@ export async function syncOwnershipToServer(
         wroteToKv: false,
         productId: null,
         paymentId: null,
+        txid: null,
         uid: null,
+        username: null,
         error: j.error || `Server error (${r.status})`,
       };
     }
@@ -77,7 +85,9 @@ export async function syncOwnershipToServer(
       wroteToKv: Boolean(j.wroteToKv),
       productId: j.productId ?? null,
       paymentId: j.paymentId ?? null,
+      txid: j.txid ?? null,
       uid: j.uid ?? null,
+      username: j.username ?? null,
     };
   } catch (e) {
     return {
@@ -88,7 +98,9 @@ export async function syncOwnershipToServer(
       wroteToKv: false,
       productId: null,
       paymentId: null,
+      txid: null,
       uid: null,
+      username: null,
       error: e instanceof Error ? e.message : String(e),
     };
   }
