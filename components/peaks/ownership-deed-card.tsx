@@ -278,7 +278,8 @@ function NoOwnershipModal({ onClose }: { onClose: () => void }) {
           Nothing in your collection yet
         </h2>
         <p className="mt-3 text-[0.88rem] leading-relaxed text-[var(--pk-muted)]">
-          Unlock any peak&apos;s detail page to seal your collection record here.
+          Open any peak&apos;s detail page. After sealed unlock, collect it into
+          your collection and hold it.
         </p>
         <Button className="mt-5 w-full" onClick={onClose}>
           Close
