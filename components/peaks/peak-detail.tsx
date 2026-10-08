@@ -171,11 +171,11 @@ function PeakPaywall() {
   return (
     <div className="mx-auto w-full max-w-md px-5 pb-10 pt-2 md:max-w-2xl">
       <div className="rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
-        <div className="rounded-2xl border border-[var(--pk-amber)]/40 bg-[var(--pk-amber-soft)]/45 px-4 py-3">
-          <p className="text-[0.88rem] leading-relaxed text-[var(--pk-ink)]">
+        <div className="rounded-2xl border border-[var(--pk-amber)]/40 bg-[var(--pk-amber-soft)]/45 px-5 py-5">
+          <p className="text-[0.95rem] leading-relaxed text-[var(--pk-ink)]">
             {PAYMENT_ENV.intro}
           </p>
-          <p className="mt-2 text-[0.8rem] leading-relaxed text-[var(--pk-muted)]">
+          <p className="mt-3 text-[0.82rem] leading-relaxed text-[var(--pk-muted)]">
             {PAYMENT_ENV.credit}
           </p>
         </div>
@@ -189,20 +189,28 @@ function PeakPaywall() {
           </span>
         </div>
 
-        <h2 className="font-display mt-2 text-[1.85rem] leading-tight text-[var(--pk-ink)]">
+        <h2
+          className={
+            checking || isUnlocked
+              ? "font-display mt-2 text-[1.45rem] leading-snug text-[var(--pk-ink)]"
+              : "font-display mt-2 text-[1.2rem] leading-snug text-[var(--pk-ink)]"
+          }
+        >
           {checking
             ? PAYMENT_ENV.checkingTitle
             : isUnlocked
               ? PAYMENT_ENV.unlockedTitle
               : PAYMENT_ENV.payTitle}
         </h2>
-        <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--pk-muted)]">
-          {checking
-            ? PAYMENT_ENV.checkingBody
-            : isUnlocked
-              ? PAYMENT_ENV.unlockedBody(appName)
-              : PAYMENT_ENV.testNote}
-        </p>
+        {(checking || isUnlocked || PAYMENT_ENV.testNote) && (
+          <p className="mt-2 text-[0.92rem] leading-relaxed text-[var(--pk-muted)]">
+            {checking
+              ? PAYMENT_ENV.checkingBody
+              : isUnlocked
+                ? PAYMENT_ENV.unlockedBody(appName)
+                : PAYMENT_ENV.testNote}
+          </p>
+        )}
 
         {!checking && !isUnlocked ? (
           <>

@@ -10,22 +10,24 @@ export const PAYMENT_ENV = {
   badge: "MAINNET π",
   /** Top-of-form notice — same on both apps */
   intro:
-    "3141 entries, grounded in real existence — curated and evenly distributed across 250 countries by CODE ARCHE. Launched for Pi Network's 7th anniversary. One payment unlocks access for as long as Pi Network and CODE ARCHE remain in service.",
+    "3141 entries, grounded in real existence — curated and evenly distributed across 250 countries by CODE ARCHE. Launched for Pi Network's 7th anniversary. One payment unlocks access for as long as Pi Network and CODE ARCHE remain in service. Enjoy semi-permanent collection value.",
   /** Collection proof notice — same body, closing line after purchase */
   ownedIntro:
-    "3141 entries, grounded in real existence — curated and evenly distributed across 250 countries by CODE ARCHE. Launched for Pi Network's 7th anniversary. Collected with one payment — access while Pi Network and CODE ARCHE remain in service.",
+    "3141 entries, grounded in real existence — curated and evenly distributed across 250 countries by CODE ARCHE. Launched for Pi Network's 7th anniversary. Collected with one payment — access while Pi Network and CODE ARCHE remain in service. Enjoy semi-permanent collection value.",
   credit: "— Built with Cursor Agent, Claude, and Perplexity.",
-  testNote: "Sealed unlock with 3.141 π.",
+  /** Pay title already states the seal; keep subtitle empty on unpaid form. */
+  testNote: "",
   buttonLabel: (amount: number | string) => `Pay ${amount} π · unlock all`,
   priceLabel: (amount: number | string) => `${amount} π`,
-  busyLabel: "Opening Pi checkout…",
+  busyLabel: "Confirming sealed unlock…",
   unavailable: "Payment unavailable",
-  checkingTitle: "Checking unlock…",
+  checkingTitle: "Confirming sealed unlock…",
   checkingBody: "Confirming this Pi account’s purchase before checkout.",
   unlockedTitle: "Already unlocked",
   unlockedBody: (appName: string) =>
     `This account already holds ${appName} in its collection.`,
-  payTitle: "Unlock full access",
+  payTitle:
+    "Full access, sealed unlock with the immutable value of 3.141 π.",
   footer: "Mainnet checkout. Pi is transferred per Pi Network payment rules.",
   signInHint: "Sign in with Pi Browser to load the payment form.",
   authConnecting: "Connecting to Pi Network…",
