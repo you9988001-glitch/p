@@ -608,7 +608,7 @@ export function PeaksProvider({ children }: { children: ReactNode }) {
         await new Promise((r) => window.setTimeout(r, 700));
       }
       await refreshPurchases();
-      toast("Purchase sealed — ownership proof saved");
+      toast("Purchase sealed — collection proof saved");
       return deed;
     } catch (error) {
       const code = (error as { code?: string })?.code;

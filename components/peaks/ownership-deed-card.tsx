@@ -60,7 +60,7 @@ export function OwnershipDeedBody({ deed }: { deed: OwnershipDeed }) {
       <div className="divide-y divide-[var(--pk-line-soft)]">
         <Row label="Status" value={PAYMENT_ENV.deedOwnedStatus} />
         <Row label="Paid" value={PAYMENT_ENV.deedPaidLabel(deed.priceInPi)} />
-        <Row label="Owned since" value={formatDeedDate(deed.purchasedAt)} />
+        <Row label="Collected since" value={formatDeedDate(deed.purchasedAt)} />
         <Row label="Sealed on device" value={formatDeedDate(deed.sealedAt)} />
         <Row label="Product" value={deed.productName} />
         <Row
@@ -100,10 +100,10 @@ export function OwnershipDeedModal({
         className="max-h-[85dvh] w-full max-w-md overflow-y-auto rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.65)] md:max-w-lg"
       >
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[var(--pk-forest)]">
-          CODE ARCHE · ownership
+          CODE ARCHE · collection
         </p>
         <h2 className="font-display mt-2 text-[1.7rem] text-[var(--pk-ink)]">
-          {title ?? "Peaks 3141 ownership proof"}
+          {title ?? "Peaks 3141 collection proof"}
         </h2>
         <div className="mt-4">
           <OwnershipDeedBody deed={deed} />
@@ -201,12 +201,12 @@ export function OwnershipProofCard() {
         className="pk-press mt-8 w-full rounded-2xl border border-[var(--pk-line)] bg-[var(--pk-panel)] px-4 py-3.5 text-left"
       >
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[var(--pk-forest)]">
-          Ownership proof
+          Collection proof
         </p>
         <p className="mt-1 text-[0.95rem] text-[var(--pk-ink)]">
           {owned
             ? "View your Peaks 3141 purchase record"
-            : "No ownership yet"}
+            : "Nothing in your collection yet"}
         </p>
         {deed && (
           <p className="pk-nums mt-1 text-[0.8rem] text-[var(--pk-faint)]">
@@ -241,13 +241,13 @@ function ConfirmingOwnershipModal({ onClose }: { onClose: () => void }) {
         className="w-full max-w-md rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.65)]"
       >
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[var(--pk-forest)]">
-          CODE ARCHE · ownership
+          CODE ARCHE · collection
         </p>
         <h2 className="font-display mt-2 text-[1.7rem] text-[var(--pk-ink)]">
           Confirming your purchase
         </h2>
         <p className="mt-3 text-[0.88rem] leading-relaxed text-[var(--pk-muted)]">
-          Pi has confirmed your ownership, but the record is still being sealed
+          Pi has confirmed your collection, but the record is still being sealed
           on this device. Reopen this card in a moment to see the full details.
         </p>
         <Button className="mt-5 w-full" onClick={onClose}>
@@ -272,13 +272,13 @@ function NoOwnershipModal({ onClose }: { onClose: () => void }) {
         className="w-full max-w-md rounded-3xl border border-[var(--pk-line)] bg-[var(--pk-panel-solid)] p-5 shadow-[0_24px_60px_rgba(0,0,0,0.65)]"
       >
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[var(--pk-forest)]">
-          CODE ARCHE · ownership
+          CODE ARCHE · collection
         </p>
         <h2 className="font-display mt-2 text-[1.7rem] text-[var(--pk-ink)]">
-          No ownership yet
+          Nothing in your collection yet
         </h2>
         <p className="mt-3 text-[0.88rem] leading-relaxed text-[var(--pk-muted)]">
-          Unlock any peak&apos;s detail page to seal your ownership record here.
+          Unlock any peak&apos;s detail page to seal your collection record here.
         </p>
         <Button className="mt-5 w-full" onClick={onClose}>
           Close
