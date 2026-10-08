@@ -13,7 +13,7 @@ export const PAYMENT_ENV = {
     "3141 entries, grounded in real existence — curated and evenly distributed across 250 countries by CODE ARCHE. Launched for Pi Network's 7th anniversary. One payment unlocks access for as long as Pi Network and CODE ARCHE remain in service. Enjoy semi-permanent collection value.",
   /** Collection proof notice — same body, closing line after purchase */
   ownedIntro:
-    "3141 entries, grounded in real existence — curated and evenly distributed across 250 countries by CODE ARCHE. Launched for Pi Network's 7th anniversary. Collected with one payment — access while Pi Network and CODE ARCHE remain in service. Enjoy semi-permanent collection value.",
+    "Collection proof issued. Your 3.141 π payment is confirmed — full access while Pi Network and CODE ARCHE remain in service. Enjoy semi-permanent collection value.",
   credit: "— Built with Cursor Agent, Claude, and Perplexity.",
   /** Pay title already states the seal; keep subtitle empty on unpaid form. */
   testNote: "",
